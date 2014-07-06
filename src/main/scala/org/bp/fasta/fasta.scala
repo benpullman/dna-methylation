@@ -10,7 +10,6 @@ object FASTA {
 		val output = Source.fromFile(filename).foldLeft[(Boolean,String,List[Nucleobase],List[DNA])]((true, "", List(), List()))((out, add) => {
 			add match {
 				case '>' => {
-					println(DNA(out._2, out._3))
 					(true, "", List(),  DNA(out._2, out._3.reverse) :: out._4)
 				}
 				case '\n' => if (out._1) (false, out._2, out._3, out._4) else out
@@ -19,8 +18,8 @@ object FASTA {
 				}
 			}
 		)
-		"Done"
-		//DNA(output._2,output._3) :: output._4.drop(1)
+		print("The length is " + output._4.length)
+		(DNA(output._2,output._3.reverse) :: output._4).reverse.drop(1)
 	}
 	def readStream(filename: String) = {
 		//reading by char
@@ -37,7 +36,7 @@ object FASTA {
 				}
 			}
 		)
-		val outstream = DNA(output._2,output._3) #:: output._4.drop(1)
+		val outstream = (DNA(output._2,output._3.reverse) #:: output._4).reverse.drop(1)
 		outstream(10000) + "\n" + outstream(10001)
 	}
 	def readNoSave(filename: String) = {
