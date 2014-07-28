@@ -18,7 +18,6 @@ object FASTA {
 				}
 			}
 		)
-		print("The length is " + output._4.length)
 		(DNA(output._2,output._3.reverse) :: output._4).reverse.drop(1)
 	}
 	def readStream(filename: String) = {
