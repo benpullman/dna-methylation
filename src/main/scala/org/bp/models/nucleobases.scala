@@ -17,8 +17,8 @@ case class Nucleobase(name: String){
   }
 }
 
-class Sequence(name: String, nucleobases: List[Nucleobase]){
-    override def toString = "Name: " + name + "\nSequence: " + this.nucleobases.foldLeft("")((nucleotide,nucleobase) => nucleotide + nucleobase)
+class Sequence(name: String, nucleobases: List[Nucleobase], bisulfiteConversion: Option[String] = None, direction: Option[String] = None){
+    override def toString = "Name: " + name + bisulfiteConversion.map(" " + _ + " ").getOrElse("") + direction.map(_ + " ").getOrElse("") + "\nSequence: " + this.nucleobases.foldLeft("")((nucleotide,nucleobase) => nucleotide + nucleobase)
     def findCpgSites = this.nucleobases.foldLeft[(Boolean,Int,List[Int])]((false,0,List()))((acc,next) => {
       if (acc._1 && next == Nucleobase("G")) {
         (false, acc._2 + 1, (acc._2 - 1) :: acc._3)
@@ -30,14 +30,62 @@ class Sequence(name: String, nucleobases: List[Nucleobase]){
     })._3.reverse
 }
 
-case class DNA(name: String, nucleobases: List[Nucleobase]) extends Sequence(name: String, nucleobases: List[Nucleobase]){
+case class DNA(name: String, nucleobases: List[Nucleobase], bisulfiteConversion: Option[String] = None, direction: Option[String] = None) extends Sequence(name: String, nucleobases: List[Nucleobase],bisulfiteConversion: Option[String], direction: Option[String]){
   def toRNA = RNA(name = name, nucleobases = this.nucleobases.map(nucleobase => nucleobase.toRNA))
   def reverseComplement = this.nucleobases.reverse.map(nucleobase => nucleobase.complement)
   def reverse = this.copy(nucleobases = this.nucleobases.reverse)
   def add(nucleobase: Nucleobase) = this.copy(nucleobases = nucleobase::nucleobases)
+  def generateBisulfiteQuartet = {
+      val CtoT = Map(Nucleobase("C") -> Nucleobase("T"))
+      val GtoA = Map(Nucleobase("G") -> Nucleobase("A"))
+      def bisulfiteConversionForward(input: DNA, conversion: Map[Nucleobase,Nucleobase], conversionString: String) = {
+        val sequence = input.nucleobases.foldLeft[(List[Nucleobase],Option[Nucleobase])]((List(),None))((bases,next) => {
+          next match {
+            case Nucleobase("C") => bases._2 match {
+              case Some(Nucleobase("C")) => (conversion.getOrElse(Nucleobase("C"), Nucleobase("C")) :: bases._1, Some(Nucleobase("C")))
+              case _ => (bases._1, Some(Nucleobase("C")))
+            }
+            case Nucleobase("G") => bases._2 match {
+              case Some(Nucleobase("C")) => (Nucleobase("G") :: Nucleobase("C") :: bases._1,None)
+              case _ => (conversion.getOrElse(Nucleobase("G"), Nucleobase("G")) :: bases._1,None)
+            }
+            case base => bases._2 match {
+              case Some(Nucleobase("C")) => (conversion.getOrElse(base,base) :: conversion.getOrElse(Nucleobase("C"),Nucleobase("C")) :: bases._1,None)
+              case _ => (conversion.getOrElse(base,base) :: bases._1,None)
+            }
+          }
+        })._1.reverse
+        DNA(input.name,sequence,Some(conversionString),Some("Forward"))
+      }
+      def bisulfiteConversionReverseComplement(input: DNA, conversion: Map[Nucleobase,Nucleobase], conversionString: String) = {
+        val sequence = input.nucleobases.foldLeft[(List[Nucleobase],Option[Nucleobase])]((List(),None))((bases,next) => {
+          next match {
+            case Nucleobase("C") => bases._2 match {
+              case Some(Nucleobase("C")) => (conversion.getOrElse(Nucleobase("C"), Nucleobase("C")).complement :: bases._1, Some(Nucleobase("C")))
+              case _ => (bases._1, Some(Nucleobase("C")))
+            }
+            case Nucleobase("G") => bases._2 match {
+              case Some(Nucleobase("C")) => (Nucleobase("C") :: Nucleobase("G") :: bases._1,None)
+              case _ => (conversion.getOrElse(Nucleobase("G"), Nucleobase("G")).complement :: bases._1,None)
+            }
+            case base => bases._2 match {
+              case Some(Nucleobase("C")) => (conversion.getOrElse(base,base).complement :: conversion.getOrElse(Nucleobase("C"),Nucleobase("C")).complement :: bases._1,None)
+              case _ => (conversion.getOrElse(base,base).complement :: bases._1,None)
+            }
+          }
+        })._1
+        DNA(input.name,sequence,Some(conversionString),Some("Reverse Complement"))
+      }
+      List(
+        bisulfiteConversionForward(this,CtoT,"C => T"),
+        bisulfiteConversionForward(this,GtoA,"G => A"),
+        bisulfiteConversionReverseComplement(this,CtoT,"C => T"),
+        bisulfiteConversionReverseComplement(this,GtoA,"G => A")
+      )
+    }
 }
 
-case class RNA(name: String, nucleobases: List[Nucleobase]) extends Sequence(name: String, nucleobases: List[Nucleobase])
+case class RNA(name: String, nucleobases: List[Nucleobase], bisulfiteConversion: Option[String] = None, direction: Option[String] = None) extends Sequence(name: String, nucleobases: List[Nucleobase],bisulfiteConversion: Option[String], direction: Option[String])
 
 object Nucleobase{
 	def byteToNucleobase(byte: Byte): Nucleobase = {
@@ -54,6 +102,10 @@ object Nucleobase{
         case 'C' => Nucleobase("C")
         case 'G' => Nucleobase("G")
         case 'T' => Nucleobase("T")
+        case 'a' => Nucleobase("A")
+        case 'c' => Nucleobase("C")
+        case 'g' => Nucleobase("G")
+        case 't' => Nucleobase("T")
       }
     }
 }
@@ -61,6 +113,10 @@ object Nucleobase{
 object Sequence{
   def makeSequence(added: Nucleobase, before: DNA): DNA = {
     before.add(added)
+  }
+  def fromString(name:String, input:String) = {
+    val sequence = input.foldLeft[List[Nucleobase]](List())((bases,base) => Nucleobase.charToNucleobase(base) :: bases)
+    DNA(name,sequence.reverse)
   }
   def GCCount(added: Nucleobase, before: (Int,Int)): (Int,Int) = {
     added match {
@@ -141,11 +197,14 @@ object Sequence{
     val methylationList = list.filter(comp => comp == "*" || comp == "#").map(comp => if (comp == "*") "M" else "U")
     methylationList
   }
-  def toAnalysis(s: DNA, r: DNA, hit: Int, miss: Int, gapUp: Int, gapLeft: Int): Analysis = {
-    val sw = SmithWaterman.generateScoringMatrix(s,r,hit,miss,gapUp,gapLeft)
+  def toAnalysis(s: DNA, rlist: List[DNA], hit: Int, miss: Int, gapUp: Int, gapLeft: Int): Analysis = {
+    //val best = rlist.flatMap(_.generateBisulfiteQuartet).map(ref => SmithWaterman.generateScoringMatrix(s,ref,hit,miss,gapUp,gapLeft)).maxBy(_.score)
+    val best = rlist.map(ref => SmithWaterman.generateScoringMatrix(s,ref,hit,miss,gapUp,gapLeft)).maxBy(_.score)
+    val r = best.reference
+    val sw = SmithWaterman.completeAlignment(s,r,best)
     val input = sw._1
     val sequences = SmithWaterman.getSequences(input)
-    val alignmentErrors = SmithWaterman.getErrors(input)
+    val alignmentErrors = SmithWaterman.getErrors(input,r)
     val sequence = sequences._1
     val reference = sequences._2
     val methylationList = sequences._2.findCpgSites
@@ -156,8 +215,8 @@ object Sequence{
     val name = s.name
     val bisulfiteMap = comparison.groupBy(t => t).map(t => (t._1,t._2.length))
     val methylation = Methylation(bisulfiteMap.getOrElse("#",0),bisulfiteMap.getOrElse("*",0),methylationPoints, methylationList.map(_+1))
-    val bisulfite = BisulfiteConversion(bisulfiteMap.getOrElse(":",0),bisulfiteMap.getOrElse("!",0),"C => T")
-    Analysis(sequenceName = name, sequenceLength = sequenceLength, referenceLength = referenceLength, alignment = alignmentErrors, bisulfite = bisulfite, methylation = methylation, seqStart=sw._2._1, seqEnd=sw._2._2)
+    val bisulfite = BisulfiteConversion(bisulfiteMap.getOrElse(":",0),bisulfiteMap.getOrElse("!",0),r.bisulfiteConversion.getOrElse(""))
+    Analysis(sequenceName = name, sequenceLength = sequenceLength, referenceLength = referenceLength, referenceName = r.name, alignment = alignmentErrors, bisulfite = bisulfite, methylation = methylation, seqStart=sw._2._1, seqEnd=sw._2._2)
   }
 
 }

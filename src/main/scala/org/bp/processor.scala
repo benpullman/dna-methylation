@@ -17,7 +17,9 @@ object Processor {
     //matrix.foreach{case a => a foreach {b => print(b.toString + "\t")}; print('\n')}
     val reference = FASTA.read("data/quma-samples/sample_genome_fasta.txt").head
     val toCheck = FASTA.read("data/quma-samples/Gm9_J1_seq_fasta.txt")
-    val results = toCheck.map(sequence => {
+    val samples = FASTA.read("data/mssm-samples/small.txt")
+    val references = FASTA.read("data/mssm-samples/refer.txt")
+    /*val results = toCheck.map(sequence => {
       /*val check = SmithWaterman.getSequences(SmithWaterman.generateScoringMatrix(sequence,reference,5,-3,-20,-2))
       val bisulfite = check._1
       val genome = check._2
@@ -26,11 +28,19 @@ object Processor {
       val comparison = Sequence.generateComparison(bisulfite,genome)
       Sequence.compare(bisulfite,genome,comparison,60)
       Sequence.methylation(comparison)*/
-      Sequence.toAnalysis(sequence,reference,5,-3,-20,-2)
+      Sequence.toAnalysis(sequence,references,5,-3,-20,-2)
       //println(bisulfite)
       //println(genome)
       })
-    print(results.toJson.prettyPrint)
+    print(results.toJson.prettyPrint)*/
+    //references.map(println(_))
+    val map = MultiplexedSequence.importMap("data/mssm-samples/barcode_sequence.csv")
+    val multiplex = MultiplexedSequence.create(references,map)
+    val newMultiplex = samples.foldLeft(multiplex)((set,toAdd) => set.addSample(toAdd,references,map.map(_.swap)))
+    println(newMultiplex.toJson.prettyPrint)
+    //val sequence = Sequence.fromString("test","ACGAGTGCCTGCACA")
+    //println(sequence)
+    //sequence.generateBisulfiteQuartet.map(println(_))
     //println("Length of sequence to check " + toCheck.length)
     //toCheck.map(dna => println(dna.name + "\n" + Methylation.checkSites(reference)(dna)))
     //println("done")

@@ -7,6 +7,7 @@ case class Analysis(
 	sequenceName: String,
 	sequenceLength: Int,
 	referenceLength: Int,
+	referenceName: String,
 	alignment: Alignment,
 	bisulfite: BisulfiteConversion,
 	methylation: Methylation,
