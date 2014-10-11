@@ -1,0 +1,1676 @@
+[{
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/64/ccs",
+  "sequenceLength": 783,
+  "referenceLength": 649,
+  "referenceName": "cebpa_b",
+  "alignment": {
+    "mismatches": 96,
+    "gaps": 0,
+    "direction": "Reverse Complement",
+    "length": 653
+  },
+  "bisulfite": {
+    "convertedCpH": 152,
+    "unconvertedCpH": 5,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 88,
+    "methylatedCpGSites": 1,
+    "sequence": ["U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [1, 9, 16, 19, 33, 35, 40, 43, 46, 49, 57, 70, 74, 76, 80, 82, 90, 95, 97, 106, 111, 113, 116, 135, 143, 145, 148, 162, 167, 180, 187, 190, 193, 195, 198, 216, 218, 220, 224, 234, 237, 245, 247, 255, 258, 260, 276, 278, 281, 286, 293, 302, 304, 317, 319, 322, 326, 338, 344, 349, 353, 356, 362, 364, 370, 376, 382, 412, 416, 428, 432, 452, 462, 480, 487, 513, 515, 551, 557, 559, 564, 578, 601, 612, 621, 623, 625, 640, 642]
+  },
+  "seqStart": 63,
+  "seqEnd": 715,
+  "barcode": "barcode_6r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/65/ccs",
+  "sequenceLength": 946,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 24,
+    "gaps": 3,
+    "direction": "Reverse Complement",
+    "length": 823
+  },
+  "bisulfite": {
+    "convertedCpH": 209,
+    "unconvertedCpH": 3,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 11,
+    "methylatedCpGSites": 74,
+    "sequence": ["M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "-", "M", "M", "M", "M", "M", "U", "M", "U", "U", "M", "U", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "C", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 3, 18, 25, 28, 42, 45, 48, 50, 57, 68, 70, 77, 83, 89, 94, 115, 119, 124, 128, 166, 171, 192, 194, 200, 203, 213, 216, 224, 227, 242, 248, 250, 268, 278, 281, 286, 292, 302, 307, 337, 345, 350, 357, 366, 373, 382, 394, 414, 420, 424, 430, 445, 448, 462, 468, 496, 500, 504, 516, 531, 537, 564, 583, 585, 588, 608, 623, 627, 635, 647, 653, 661, 667, 672, 728, 730, 733, 740, 749, 762, 765, 771, 776, 786, 788, 822]
+  },
+  "seqStart": 64,
+  "seqEnd": 883,
+  "barcode": "barcode_12r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/72/ccs",
+  "sequenceLength": 870,
+  "referenceLength": 655,
+  "referenceName": "P16",
+  "alignment": {
+    "mismatches": 21,
+    "gaps": 0,
+    "direction": "Reverse Complement",
+    "length": 676
+  },
+  "bisulfite": {
+    "convertedCpH": 110,
+    "unconvertedCpH": 4,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 0,
+    "methylatedCpGSites": 56,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 8, 12, 22, 27, 38, 44, 57, 61, 76, 82, 87, 89, 93, 111, 133, 137, 140, 158, 161, 165, 187, 193, 196, 200, 204, 206, 211, 258, 267, 284, 316, 343, 346, 353, 361, 382, 394, 415, 437, 450, 464, 478, 529, 536, 555, 557, 565, 581, 593, 617, 623, 628, 641, 643, 675]
+  },
+  "seqStart": 66,
+  "seqEnd": 741,
+  "barcode": "barcode_23R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/87/ccs",
+  "sequenceLength": 862,
+  "referenceLength": 720,
+  "referenceName": "APAF1",
+  "alignment": {
+    "mismatches": 82,
+    "gaps": 0,
+    "direction": "Reverse Complement",
+    "length": 718
+  },
+  "bisulfite": {
+    "convertedCpH": 135,
+    "unconvertedCpH": 3,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 80,
+    "methylatedCpGSites": 5,
+    "sequence": ["U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "M", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [4, 8, 28, 38, 47, 58, 79, 84, 87, 89, 99, 106, 111, 118, 159, 169, 180, 183, 186, 197, 208, 211, 219, 226, 231, 247, 249, 254, 257, 299, 316, 324, 341, 354, 370, 373, 388, 392, 395, 397, 399, 403, 440, 447, 453, 456, 458, 471, 482, 484, 486, 488, 500, 509, 511, 515, 520, 539, 541, 544, 546, 561, 567, 574, 577, 580, 582, 586, 589, 594, 596, 598, 600, 609, 627, 634, 637, 644, 646, 648, 652, 670, 687, 699, 715]
+  },
+  "seqStart": 65,
+  "seqEnd": 782,
+  "barcode": "barcode_1r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/137/ccs",
+  "sequenceLength": 846,
+  "referenceLength": 655,
+  "referenceName": "P16",
+  "alignment": {
+    "mismatches": 57,
+    "gaps": 1,
+    "direction": "Reverse Complement",
+    "length": 655
+  },
+  "bisulfite": {
+    "convertedCpH": 111,
+    "unconvertedCpH": 3,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 54,
+    "methylatedCpGSites": 2,
+    "sequence": ["U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [1, 8, 12, 22, 27, 37, 43, 55, 59, 74, 80, 85, 87, 91, 109, 130, 133, 136, 154, 157, 161, 183, 189, 192, 196, 200, 202, 207, 252, 261, 276, 307, 309, 332, 335, 341, 349, 370, 381, 402, 423, 436, 449, 461, 509, 516, 535, 537, 545, 561, 573, 597, 603, 608, 621, 623]
+  },
+  "seqStart": 64,
+  "seqEnd": 717,
+  "barcode": "barcode_7r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/150/ccs",
+  "sequenceLength": 841,
+  "referenceLength": 655,
+  "referenceName": "P16",
+  "alignment": {
+    "mismatches": 5,
+    "gaps": 4,
+    "direction": "Reverse Complement",
+    "length": 656
+  },
+  "bisulfite": {
+    "convertedCpH": 112,
+    "unconvertedCpH": 2,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 0,
+    "methylatedCpGSites": 57,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 8, 12, 22, 27, 37, 43, 55, 59, 74, 80, 85, 87, 91, 109, 130, 133, 136, 154, 157, 161, 183, 189, 192, 196, 200, 202, 207, 252, 261, 276, 307, 309, 332, 335, 341, 349, 370, 381, 402, 423, 436, 449, 461, 509, 516, 535, 537, 545, 561, 573, 597, 604, 609, 622, 624, 655]
+  },
+  "seqStart": 62,
+  "seqEnd": 713,
+  "barcode": "barcode_12r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/215/ccs",
+  "sequenceLength": 947,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 59,
+    "gaps": 17,
+    "direction": "Reverse Complement",
+    "length": 834
+  },
+  "bisulfite": {
+    "convertedCpH": 200,
+    "unconvertedCpH": 9,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 10,
+    "methylatedCpGSites": 67,
+    "sequence": ["-", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "-", "-", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "U", "U", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "U", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "-", "M", "U", "U", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 3, 18, 25, 28, 42, 45, 48, 50, 57, 68, 70, 77, 83, 89, 94, 116, 120, 125, 129, 168, 173, 175, 178, 190, 192, 194, 200, 203, 213, 216, 224, 243, 249, 251, 269, 279, 282, 287, 293, 304, 309, 339, 347, 352, 359, 368, 375, 384, 396, 416, 422, 425, 431, 446, 449, 463, 469, 497, 500, 504, 516, 531, 566, 585, 587, 590, 610, 625, 638, 658, 739, 741, 744, 751, 761, 774, 777, 783, 788, 798, 800]
+  },
+  "seqStart": 65,
+  "seqEnd": 881,
+  "barcode": "barcode_21R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/301/ccs",
+  "sequenceLength": 438,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 366,
+    "gaps": 260,
+    "direction": "Reverse Complement",
+    "length": 697
+  },
+  "bisulfite": {
+    "convertedCpH": 109,
+    "unconvertedCpH": 15,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 3,
+    "methylatedCpGSites": 8,
+    "sequence": ["M", "-", "-", "M", "-", "-", "-", "M", "T", "-", "-", "-", "-", "-", "-", "-", "-", "-", "U", "-", "-", "M", "T", "-", "-", "U", "C", "C", "C", "-", "-", "U", "-", "-", "-", "-", "T", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "U", "-", "T", "-", "-", "-", "-", "-", "C", "U", "-", "M", "M", "U", "-", "M", "M"],
+    "reference": [7, 9, 16, 22, 28, 33, 54, 58, 63, 67, 105, 110, 112, 114, 126, 128, 130, 136, 139, 149, 152, 160, 163, 178, 184, 186, 204, 214, 217, 222, 228, 238, 243, 273, 281, 286, 293, 302, 309, 318, 330, 350, 356, 359, 365, 380, 383, 397, 403, 431, 434, 438, 450, 465, 470, 497, 516, 518, 521, 541, 556, 560, 567, 579, 585, 593, 599, 604, 660, 662, 665, 672, 681, 694]
+  },
+  "seqStart": 1,
+  "seqEnd": 437,
+  "barcode": "barcode_14R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/307/ccs",
+  "sequenceLength": 786,
+  "referenceLength": 649,
+  "referenceName": "cebpa_b",
+  "alignment": {
+    "mismatches": 20,
+    "gaps": 4,
+    "direction": "Forward",
+    "length": 659
+  },
+  "bisulfite": {
+    "convertedCpH": 150,
+    "unconvertedCpH": 5,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 82,
+    "methylatedCpGSites": 6,
+    "sequence": ["M", "U", "-", "U", "U", "U", "U", "U", "U", "M", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "G", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [12, 14, 29, 31, 33, 42, 53, 66, 77, 92, 97, 99, 105, 141, 143, 169, 176, 195, 205, 224, 228, 240, 244, 274, 280, 286, 292, 294, 300, 303, 308, 313, 319, 332, 336, 339, 341, 354, 356, 365, 372, 377, 380, 382, 398, 400, 403, 411, 413, 421, 424, 434, 438, 440, 442, 459, 462, 464, 467, 470, 478, 491, 496, 510, 513, 515, 523, 541, 544, 546, 551, 560, 562, 568, 576, 578, 582, 584, 588, 601, 609, 613, 616, 619, 624, 626, 640, 643, 650, 658]
+  },
+  "seqStart": 70,
+  "seqEnd": 724,
+  "barcode": "barcode_1f"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/322/ccs",
+  "sequenceLength": 644,
+  "referenceLength": 655,
+  "referenceName": "P16",
+  "alignment": {
+    "mismatches": 6,
+    "gaps": 1,
+    "direction": "Reverse Complement",
+    "length": 582
+  },
+  "bisulfite": {
+    "convertedCpH": 108,
+    "unconvertedCpH": 2,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 0,
+    "methylatedCpGSites": 50,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 8, 12, 22, 27, 37, 43, 55, 59, 74, 80, 85, 87, 91, 109, 130, 133, 136, 154, 157, 161, 183, 189, 192, 196, 200, 202, 207, 252, 261, 276, 307, 309, 332, 335, 341, 349, 370, 381, 402, 423, 436, 449, 461, 509, 516, 535, 537, 545, 561, 573]
+  },
+  "seqStart": 64,
+  "seqEnd": 644,
+  "barcode": "barcode_19R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/366/ccs",
+  "sequenceLength": 959,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 37,
+    "gaps": 5,
+    "direction": "Reverse Complement",
+    "length": 835
+  },
+  "bisulfite": {
+    "convertedCpH": 207,
+    "unconvertedCpH": 4,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 7,
+    "methylatedCpGSites": 78,
+    "sequence": ["M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "U", "M", "M", "M", "-", "M", "M", "M", "M", "M", "M", "M", "M", "U", "U", "U", "M", "C", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 3, 26, 29, 43, 46, 49, 51, 58, 69, 71, 78, 84, 90, 95, 116, 120, 125, 129, 167, 172, 175, 177, 193, 195, 201, 205, 215, 218, 226, 229, 244, 250, 252, 271, 281, 284, 289, 295, 305, 310, 340, 348, 353, 360, 369, 376, 385, 397, 417, 423, 426, 432, 447, 450, 464, 472, 500, 503, 507, 519, 534, 539, 566, 586, 588, 592, 615, 631, 635, 642, 655, 661, 669, 675, 681, 738, 740, 743, 750, 759, 772, 776, 782, 787, 797, 799, 834]
+  },
+  "seqStart": 66,
+  "seqEnd": 895,
+  "barcode": "barcode_20R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/440/ccs",
+  "sequenceLength": 941,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 1,
+    "gaps": 1,
+    "direction": "Forward",
+    "length": 815
+  },
+  "bisulfite": {
+    "convertedCpH": 205,
+    "unconvertedCpH": 8,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 85,
+    "methylatedCpGSites": 3,
+    "sequence": ["U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U"],
+    "reference": [34, 36, 46, 51, 57, 60, 73, 82, 89, 92, 94, 150, 155, 161, 169, 175, 187, 194, 198, 213, 233, 236, 238, 257, 284, 289, 304, 316, 320, 323, 351, 357, 371, 374, 389, 395, 398, 404, 424, 436, 445, 452, 461, 468, 473, 481, 511, 516, 526, 532, 537, 540, 550, 568, 570, 576, 591, 594, 602, 605, 615, 618, 624, 626, 628, 640, 642, 644, 649, 687, 691, 696, 700, 721, 726, 732, 738, 745, 747, 758, 765, 767, 770, 773, 787, 790, 797, 812, 814]
+  },
+  "seqStart": 65,
+  "seqEnd": 878,
+  "barcode": "barcode_16F"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/457/ccs",
+  "sequenceLength": 938,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 88,
+    "gaps": 5,
+    "direction": "Reverse Complement",
+    "length": 816
+  },
+  "bisulfite": {
+    "convertedCpH": 202,
+    "unconvertedCpH": 9,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 74,
+    "methylatedCpGSites": 11,
+    "sequence": ["U", "U", "U", "U", "-", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "U", "U", "M", "U", "U", "U", "U", "U", "T", "M", "M", "M", "M", "M", "M", "U", "M", "U", "M", "M"],
+    "reference": [1, 3, 18, 25, 28, 42, 45, 48, 50, 57, 68, 70, 77, 83, 89, 94, 115, 119, 124, 128, 166, 171, 173, 175, 187, 189, 191, 197, 200, 210, 213, 221, 224, 239, 245, 247, 265, 275, 278, 283, 289, 299, 304, 334, 342, 347, 354, 363, 370, 379, 391, 411, 417, 420, 426, 441, 444, 458, 464, 492, 495, 499, 511, 526, 531, 559, 578, 580, 583, 603, 618, 622, 629, 641, 647, 655, 661, 666, 722, 724, 727, 734, 743, 756, 759, 765, 770, 780, 782]
+  },
+  "seqStart": 64,
+  "seqEnd": 874,
+  "barcode": "barcode_10r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/459/ccs",
+  "sequenceLength": 836,
+  "referenceLength": 655,
+  "referenceName": "P16",
+  "alignment": {
+    "mismatches": 14,
+    "gaps": 8,
+    "direction": "Reverse Complement",
+    "length": 655
+  },
+  "bisulfite": {
+    "convertedCpH": 107,
+    "unconvertedCpH": 7,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 1,
+    "methylatedCpGSites": 53,
+    "sequence": ["-", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "-", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 8, 12, 22, 27, 37, 43, 55, 59, 74, 80, 85, 87, 91, 109, 130, 133, 136, 154, 157, 161, 183, 189, 192, 196, 200, 202, 207, 252, 261, 276, 307, 309, 332, 335, 341, 349, 370, 381, 402, 423, 436, 449, 461, 509, 516, 535, 537, 545, 561, 573, 597, 603, 608, 621, 623, 654]
+  },
+  "seqStart": 64,
+  "seqEnd": 710,
+  "barcode": "barcode_22R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/460/ccs",
+  "sequenceLength": 773,
+  "referenceLength": 649,
+  "referenceName": "cebpa_b",
+  "alignment": {
+    "mismatches": 89,
+    "gaps": 5,
+    "direction": "Reverse Complement",
+    "length": 649
+  },
+  "bisulfite": {
+    "convertedCpH": 155,
+    "unconvertedCpH": 1,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 80,
+    "methylatedCpGSites": 8,
+    "sequence": ["U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "M", "M", "U", "M", "M"],
+    "reference": [1, 9, 16, 19, 33, 35, 40, 43, 46, 49, 57, 70, 74, 76, 80, 82, 90, 95, 97, 106, 111, 113, 116, 134, 142, 144, 147, 161, 166, 179, 186, 189, 192, 194, 197, 214, 216, 218, 222, 232, 235, 243, 245, 253, 256, 258, 274, 277, 280, 285, 292, 301, 303, 316, 318, 321, 325, 337, 343, 348, 352, 355, 361, 363, 369, 375, 381, 411, 415, 427, 431, 450, 460, 478, 485, 511, 513, 548, 554, 556, 561, 575, 585, 597, 608, 617, 619, 621, 636, 638]
+  },
+  "seqStart": 63,
+  "seqEnd": 706,
+  "barcode": "barcode_13r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/463/ccs",
+  "sequenceLength": 2588,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 78,
+    "gaps": 25,
+    "direction": "Forward",
+    "length": 841
+  },
+  "bisulfite": {
+    "convertedCpH": 181,
+    "unconvertedCpH": 16,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 6,
+    "methylatedCpGSites": 74,
+    "sequence": ["M", "M", "M", "-", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "-", "M", "M", "M", "M", "M", "-", "M", "M", "M", "M", "M", "U", "U", "G", "M", "M", "-", "U", "U", "G", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "G", "G", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 35, 37, 48, 53, 59, 62, 75, 84, 92, 95, 97, 161, 168, 177, 183, 196, 203, 207, 222, 243, 246, 248, 269, 296, 301, 316, 328, 333, 336, 365, 371, 386, 389, 405, 411, 414, 420, 441, 453, 462, 469, 478, 485, 490, 498, 530, 535, 545, 551, 556, 559, 570, 588, 590, 596, 611, 614, 622, 625, 635, 638, 646, 649, 651, 663, 665, 667, 672, 711, 715, 720, 724, 745, 750, 757, 763, 770, 772, 783, 790, 792, 795, 798, 812, 815, 822, 838, 840]
+  },
+  "seqStart": 1711,
+  "seqEnd": 2526,
+  "barcode": "barcode_28R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/474/ccs",
+  "sequenceLength": 834,
+  "referenceLength": 655,
+  "referenceName": "P16",
+  "alignment": {
+    "mismatches": 9,
+    "gaps": 1,
+    "direction": "Reverse Complement",
+    "length": 659
+  },
+  "bisulfite": {
+    "convertedCpH": 108,
+    "unconvertedCpH": 6,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 2,
+    "methylatedCpGSites": 53,
+    "sequence": ["M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "-", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 8, 12, 22, 27, 37, 43, 55, 59, 74, 80, 85, 87, 91, 109, 134, 137, 155, 158, 162, 185, 191, 194, 198, 202, 204, 209, 255, 264, 279, 310, 312, 335, 338, 344, 352, 373, 384, 405, 426, 439, 452, 465, 513, 520, 539, 541, 549, 565, 577, 601, 607, 612, 625, 627, 658]
+  },
+  "seqStart": 66,
+  "seqEnd": 723,
+  "barcode": "barcode_31R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/480/ccs",
+  "sequenceLength": 943,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 1,
+    "gaps": 0,
+    "direction": "Forward",
+    "length": 817
+  },
+  "bisulfite": {
+    "convertedCpH": 213,
+    "unconvertedCpH": 0,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 7,
+    "methylatedCpGSites": 83,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "U", "M", "M", "M", "U", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 35, 37, 47, 52, 58, 61, 74, 83, 90, 93, 95, 151, 156, 162, 170, 176, 188, 195, 199, 214, 234, 237, 239, 258, 285, 290, 305, 317, 321, 324, 352, 358, 372, 375, 390, 396, 399, 405, 425, 437, 446, 453, 462, 469, 474, 482, 512, 517, 527, 533, 538, 541, 551, 569, 571, 577, 592, 595, 603, 606, 616, 619, 625, 627, 629, 641, 643, 645, 650, 688, 692, 697, 701, 722, 727, 733, 739, 747, 749, 760, 767, 769, 772, 775, 789, 792, 799, 814, 816]
+  },
+  "seqStart": 64,
+  "seqEnd": 880,
+  "barcode": "barcode_29F"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/541/ccs",
+  "sequenceLength": 927,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 19,
+    "gaps": 16,
+    "direction": "Forward",
+    "length": 817
+  },
+  "bisulfite": {
+    "convertedCpH": 199,
+    "unconvertedCpH": 7,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 27,
+    "methylatedCpGSites": 56,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "-", "M", "U", "M", "M", "M", "U", "U", "M", "U", "U", "-", "U", "U", "U", "U", "M", "U", "M", "U", "U", "U", "M", "-", "M", "-", "-", "U", "M", "-", "-", "U", "M", "M", "M", "M", "M", "U", "U", "M", "M", "M", "M", "M", "M", "M", "U", "U", "U", "M", "U", "M", "M", "M", "M", "M", "M", "U", "M", "U", "M", "U", "M", "U", "M", "M", "U", "M", "M"],
+    "reference": [1, 35, 37, 47, 52, 58, 61, 74, 83, 90, 93, 95, 151, 156, 162, 170, 176, 188, 195, 199, 214, 234, 237, 239, 258, 285, 290, 305, 317, 321, 324, 352, 358, 372, 375, 390, 396, 399, 405, 425, 437, 446, 453, 462, 469, 474, 482, 512, 517, 527, 533, 538, 541, 551, 569, 571, 577, 592, 595, 603, 606, 616, 619, 626, 628, 630, 642, 644, 646, 651, 689, 693, 698, 702, 723, 728, 734, 740, 747, 749, 760, 767, 769, 772, 775, 789, 792, 799, 814, 816]
+  },
+  "seqStart": 64,
+  "seqEnd": 864,
+  "barcode": "barcode_18F"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/546/ccs",
+  "sequenceLength": 922,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 98,
+    "gaps": 13,
+    "direction": "Reverse Complement",
+    "length": 819
+  },
+  "bisulfite": {
+    "convertedCpH": 206,
+    "unconvertedCpH": 5,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 69,
+    "methylatedCpGSites": 11,
+    "sequence": ["U", "M", "-", "U", "U", "M", "U", "U", "U", "U", "U", "U", "-", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "U", "U", "-", "-", "U", "-", "U", "-", "-", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "U", "U", "U", "U", "U", "U", "U", "U", "M", "M", "M", "U", "U", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 3, 18, 25, 28, 42, 45, 48, 50, 57, 68, 70, 77, 83, 89, 94, 115, 119, 124, 128, 166, 171, 173, 175, 187, 189, 191, 197, 200, 210, 213, 221, 224, 239, 245, 247, 265, 275, 278, 283, 289, 299, 304, 334, 342, 347, 354, 363, 370, 379, 391, 411, 417, 420, 426, 441, 444, 458, 464, 492, 495, 499, 511, 526, 531, 558, 577, 579, 582, 602, 617, 621, 628, 640, 646, 654, 660, 665, 722, 725, 728, 735, 758, 761, 767, 772, 782, 784, 818]
+  },
+  "seqStart": 64,
+  "seqEnd": 869,
+  "barcode": "barcode_22R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/576/ccs",
+  "sequenceLength": 766,
+  "referenceLength": 720,
+  "referenceName": "APAF1",
+  "alignment": {
+    "mismatches": 98,
+    "gaps": 1,
+    "direction": "Reverse Complement",
+    "length": 702
+  },
+  "bisulfite": {
+    "convertedCpH": 122,
+    "unconvertedCpH": 4,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 75,
+    "methylatedCpGSites": 5,
+    "sequence": ["U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "M", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [4, 8, 29, 39, 48, 59, 82, 87, 90, 92, 103, 110, 115, 123, 166, 188, 191, 194, 205, 216, 219, 227, 234, 239, 255, 257, 262, 265, 307, 323, 331, 348, 361, 377, 381, 396, 402, 405, 407, 409, 413, 451, 458, 464, 467, 469, 482, 493, 495, 497, 499, 511, 520, 522, 526, 531, 550, 552, 555, 557, 572, 578, 585, 588, 591, 593, 597, 600, 605, 610, 612, 621, 640, 647, 650, 657, 659, 661, 665, 683, 700]
+  },
+  "seqStart": 65,
+  "seqEnd": 765,
+  "barcode": "barcode_27R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/594/ccs",
+  "sequenceLength": 1631,
+  "referenceLength": 720,
+  "referenceName": "APAF1",
+  "alignment": {
+    "mismatches": 100,
+    "gaps": 10,
+    "direction": "Reverse Complement",
+    "length": 720
+  },
+  "bisulfite": {
+    "convertedCpH": 136,
+    "unconvertedCpH": 2,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 81,
+    "methylatedCpGSites": 1,
+    "sequence": ["U", "U", "-", "-", "U", "U", "U", "-", "U", "U", "U", "C", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [1, 6, 10, 30, 40, 49, 60, 81, 86, 89, 91, 101, 108, 113, 120, 161, 171, 182, 185, 188, 199, 210, 213, 221, 228, 233, 249, 251, 256, 259, 301, 317, 325, 342, 355, 371, 374, 390, 394, 397, 399, 401, 405, 442, 449, 455, 458, 460, 473, 484, 486, 488, 490, 502, 511, 513, 517, 522, 541, 543, 546, 548, 563, 569, 576, 579, 582, 584, 588, 591, 596, 598, 600, 602, 611, 629, 636, 639, 646, 648, 650, 654, 672, 689, 701, 717]
+  },
+  "seqStart": 831,
+  "seqEnd": 1540,
+  "barcode": "barcode_22R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/599/ccs",
+  "sequenceLength": 775,
+  "referenceLength": 649,
+  "referenceName": "cebpa_b",
+  "alignment": {
+    "mismatches": 65,
+    "gaps": 1,
+    "direction": "Reverse Complement",
+    "length": 651
+  },
+  "bisulfite": {
+    "convertedCpH": 151,
+    "unconvertedCpH": 7,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 59,
+    "methylatedCpGSites": 30,
+    "sequence": ["M", "M", "M", "M", "M", "M", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "M", "M", "U", "M", "-", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 9, 16, 19, 33, 35, 40, 43, 46, 49, 57, 70, 74, 76, 80, 82, 90, 95, 97, 106, 111, 113, 116, 134, 142, 144, 147, 161, 166, 179, 186, 189, 192, 194, 197, 214, 216, 218, 222, 232, 235, 243, 245, 253, 256, 258, 274, 276, 279, 284, 291, 300, 302, 315, 317, 320, 324, 336, 342, 347, 351, 354, 360, 362, 368, 374, 380, 415, 427, 431, 450, 460, 478, 485, 511, 513, 549, 555, 557, 562, 576, 586, 598, 609, 618, 620, 622, 637, 639, 650]
+  },
+  "seqStart": 63,
+  "seqEnd": 712,
+  "barcode": "barcode_27R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/630/ccs",
+  "sequenceLength": 947,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 9,
+    "gaps": 0,
+    "direction": "Reverse Complement",
+    "length": 821
+  },
+  "bisulfite": {
+    "convertedCpH": 210,
+    "unconvertedCpH": 3,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 4,
+    "methylatedCpGSites": 86,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 3, 18, 25, 28, 42, 45, 48, 50, 57, 68, 70, 77, 83, 89, 94, 116, 120, 125, 129, 168, 173, 175, 177, 189, 191, 193, 199, 202, 212, 215, 223, 226, 241, 247, 249, 267, 277, 280, 285, 291, 301, 306, 336, 344, 349, 356, 365, 372, 381, 393, 413, 419, 422, 428, 443, 446, 460, 466, 494, 497, 501, 513, 529, 534, 561, 580, 582, 585, 605, 621, 625, 632, 644, 650, 658, 664, 669, 725, 727, 730, 737, 746, 760, 763, 769, 774, 784, 786, 820]
+  },
+  "seqStart": 64,
+  "seqEnd": 884,
+  "barcode": "barcode_24R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/639/ccs",
+  "sequenceLength": 876,
+  "referenceLength": 720,
+  "referenceName": "APAF1",
+  "alignment": {
+    "mismatches": 91,
+    "gaps": 3,
+    "direction": "Reverse Complement",
+    "length": 723
+  },
+  "bisulfite": {
+    "convertedCpH": 131,
+    "unconvertedCpH": 7,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 81,
+    "methylatedCpGSites": 3,
+    "sequence": ["U", "U", "-", "U", "U", "U", "U", "U", "M", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [1, 6, 10, 30, 40, 49, 60, 81, 86, 89, 91, 101, 108, 113, 120, 161, 171, 182, 185, 188, 199, 210, 213, 221, 228, 233, 250, 252, 257, 260, 302, 318, 326, 343, 356, 372, 376, 391, 395, 398, 400, 402, 406, 444, 451, 457, 460, 462, 475, 486, 488, 490, 492, 504, 513, 515, 519, 524, 543, 545, 548, 550, 565, 571, 578, 581, 584, 586, 590, 593, 598, 600, 602, 604, 613, 631, 638, 641, 649, 651, 653, 657, 675, 692, 704, 720]
+  },
+  "seqStart": 64,
+  "seqEnd": 783,
+  "barcode": "barcode_5r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/670/ccs",
+  "sequenceLength": 928,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 15,
+    "gaps": 14,
+    "direction": "Forward",
+    "length": 816
+  },
+  "bisulfite": {
+    "convertedCpH": 205,
+    "unconvertedCpH": 4,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 0,
+    "methylatedCpGSites": 90,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 35, 37, 47, 52, 58, 61, 74, 83, 90, 93, 95, 151, 156, 162, 170, 176, 188, 195, 199, 214, 234, 237, 239, 258, 285, 290, 305, 317, 321, 324, 352, 358, 372, 375, 390, 396, 399, 405, 425, 437, 446, 453, 462, 469, 474, 482, 512, 517, 527, 533, 538, 541, 551, 569, 571, 577, 592, 595, 603, 606, 616, 619, 625, 627, 629, 641, 643, 645, 650, 688, 692, 697, 701, 722, 727, 733, 739, 746, 748, 759, 766, 768, 771, 774, 788, 791, 798, 813, 815]
+  },
+  "seqStart": 64,
+  "seqEnd": 865,
+  "barcode": "barcode_25F"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/723/ccs",
+  "sequenceLength": 862,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 4,
+    "gaps": 2,
+    "direction": "Reverse Complement",
+    "length": 801
+  },
+  "bisulfite": {
+    "convertedCpH": 208,
+    "unconvertedCpH": 4,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 2,
+    "methylatedCpGSites": 87,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 3, 18, 25, 28, 42, 45, 48, 50, 57, 68, 70, 77, 83, 89, 94, 115, 119, 124, 128, 166, 171, 173, 175, 187, 189, 191, 197, 200, 210, 213, 221, 224, 239, 245, 247, 265, 275, 278, 283, 289, 299, 304, 334, 342, 347, 354, 363, 370, 379, 391, 411, 417, 420, 426, 441, 444, 458, 464, 492, 495, 499, 511, 526, 531, 558, 577, 579, 582, 602, 617, 621, 628, 640, 646, 654, 660, 665, 721, 723, 726, 733, 742, 755, 758, 764, 769, 779, 781]
+  },
+  "seqStart": 64,
+  "seqEnd": 862,
+  "barcode": "barcode_27R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/745/ccs",
+  "sequenceLength": 965,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 33,
+    "gaps": 1,
+    "direction": "Reverse Complement",
+    "length": 838
+  },
+  "bisulfite": {
+    "convertedCpH": 208,
+    "unconvertedCpH": 4,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 10,
+    "methylatedCpGSites": 77,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "U", "M", "U", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 3, 26, 29, 43, 46, 49, 51, 58, 69, 71, 78, 84, 91, 96, 118, 122, 127, 132, 170, 175, 177, 179, 191, 193, 195, 201, 204, 214, 217, 225, 228, 244, 250, 252, 270, 280, 283, 288, 294, 305, 310, 341, 349, 355, 364, 373, 380, 389, 401, 421, 427, 430, 437, 452, 456, 478, 506, 509, 513, 526, 541, 546, 573, 593, 595, 599, 620, 635, 647, 659, 665, 673, 679, 684, 740, 742, 745, 753, 762, 775, 778, 785, 790, 801, 803, 837]
+  },
+  "seqStart": 64,
+  "seqEnd": 900,
+  "barcode": "barcode_2r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/750/ccs",
+  "sequenceLength": 848,
+  "referenceLength": 655,
+  "referenceName": "P16",
+  "alignment": {
+    "mismatches": 6,
+    "gaps": 1,
+    "direction": "Forward",
+    "length": 657
+  },
+  "bisulfite": {
+    "convertedCpH": 108,
+    "unconvertedCpH": 6,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 1,
+    "methylatedCpGSites": 53,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M"],
+    "reference": [31, 33, 46, 51, 57, 82, 94, 110, 118, 120, 139, 146, 194, 206, 219, 232, 253, 274, 285, 306, 314, 320, 323, 346, 348, 379, 394, 403, 448, 453, 455, 459, 463, 466, 472, 494, 498, 501, 519, 522, 525, 546, 564, 568, 570, 575, 581, 596, 600, 619, 630, 635, 645, 649, 656]
+  },
+  "seqStart": 130,
+  "seqEnd": 785,
+  "barcode": "barcode_29F"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/772/ccs",
+  "sequenceLength": 778,
+  "referenceLength": 649,
+  "referenceName": "cebpa_b",
+  "alignment": {
+    "mismatches": 2,
+    "gaps": 0,
+    "direction": "Forward",
+    "length": 649
+  },
+  "bisulfite": {
+    "convertedCpH": 155,
+    "unconvertedCpH": 3,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 84,
+    "methylatedCpGSites": 7,
+    "sequence": ["M", "M", "M", "U", "M", "M", "U", "M", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [1, 12, 14, 29, 31, 33, 42, 53, 65, 75, 89, 94, 96, 102, 137, 139, 165, 172, 190, 200, 219, 223, 235, 239, 269, 275, 281, 287, 289, 295, 298, 302, 307, 313, 325, 329, 332, 334, 347, 349, 358, 365, 370, 373, 375, 391, 393, 396, 404, 406, 414, 417, 427, 431, 433, 435, 452, 455, 457, 460, 463, 470, 483, 488, 502, 505, 507, 515, 533, 536, 538, 543, 552, 554, 559, 567, 569, 573, 575, 579, 592, 600, 603, 606, 609, 614, 616, 630, 633, 640, 648]
+  },
+  "seqStart": 68,
+  "seqEnd": 716,
+  "barcode": "barcode_7f"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/776/ccs",
+  "sequenceLength": 940,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 3,
+    "gaps": 2,
+    "direction": "Forward",
+    "length": 816
+  },
+  "bisulfite": {
+    "convertedCpH": 212,
+    "unconvertedCpH": 0,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 7,
+    "methylatedCpGSites": 83,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "U", "M", "M", "M", "U", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 35, 37, 47, 52, 58, 61, 74, 83, 90, 93, 95, 151, 156, 162, 170, 176, 188, 195, 199, 214, 234, 237, 239, 258, 285, 290, 305, 317, 321, 324, 352, 358, 372, 375, 390, 396, 399, 405, 425, 437, 446, 453, 462, 469, 474, 482, 512, 517, 527, 533, 538, 541, 551, 569, 571, 577, 592, 595, 603, 606, 616, 619, 625, 627, 629, 641, 643, 645, 650, 688, 692, 697, 701, 722, 727, 733, 739, 746, 748, 759, 766, 768, 771, 774, 788, 791, 798, 813, 815]
+  },
+  "seqStart": 64,
+  "seqEnd": 877,
+  "barcode": "barcode_29F"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/781/ccs",
+  "sequenceLength": 954,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 91,
+    "gaps": 7,
+    "direction": "Reverse Complement",
+    "length": 828
+  },
+  "bisulfite": {
+    "convertedCpH": 206,
+    "unconvertedCpH": 3,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 44,
+    "methylatedCpGSites": 32,
+    "sequence": ["M", "C", "M", "U", "M", "M", "M", "M", "M", "U", "M", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "C", "U", "-", "M", "U", "-", "U", "U", "U", "U", "U", "M", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "M", "M", "U", "M", "U", "M", "U", "C", "C", "-", "M", "M", "M", "U", "-", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 3, 18, 29, 43, 46, 49, 51, 58, 69, 71, 78, 84, 90, 95, 116, 120, 125, 129, 170, 175, 177, 179, 192, 194, 196, 202, 206, 216, 219, 227, 230, 252, 254, 272, 282, 285, 290, 296, 306, 311, 341, 349, 354, 361, 370, 377, 386, 398, 419, 425, 435, 450, 453, 467, 473, 501, 504, 508, 520, 535, 540, 567, 586, 588, 591, 611, 626, 630, 637, 649, 655, 663, 669, 674, 732, 734, 737, 754, 771, 777, 782, 792, 794]
+  },
+  "seqStart": 67,
+  "seqEnd": 887,
+  "barcode": "barcode_19R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/820/ccs",
+  "sequenceLength": 841,
+  "referenceLength": 655,
+  "referenceName": "P16",
+  "alignment": {
+    "mismatches": 9,
+    "gaps": 4,
+    "direction": "Reverse Complement",
+    "length": 655
+  },
+  "bisulfite": {
+    "convertedCpH": 109,
+    "unconvertedCpH": 5,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 1,
+    "methylatedCpGSites": 55,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 8, 12, 22, 27, 37, 43, 55, 59, 74, 80, 85, 87, 91, 109, 130, 133, 136, 154, 157, 161, 183, 189, 192, 196, 200, 202, 207, 252, 261, 276, 307, 309, 332, 335, 341, 349, 370, 381, 402, 423, 436, 449, 461, 509, 516, 535, 537, 545, 561, 573, 597, 603, 608, 621, 623, 654]
+  },
+  "seqStart": 64,
+  "seqEnd": 714,
+  "barcode": "barcode_9r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/831/ccs",
+  "sequenceLength": 876,
+  "referenceLength": 720,
+  "referenceName": "APAF1",
+  "alignment": {
+    "mismatches": 148,
+    "gaps": 18,
+    "direction": "Reverse Complement",
+    "length": 743
+  },
+  "bisulfite": {
+    "convertedCpH": 128,
+    "unconvertedCpH": 2,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 74,
+    "methylatedCpGSites": 2,
+    "sequence": ["-", "U", "U", "-", "-", "U", "U", "U", "U", "U", "U", "-", "U", "U", "U", "U", "-", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "M", "U", "U", "U", "U", "U", "-", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "T", "U", "U", "U", "U", "U", "U", "U", "U", "T", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [1, 6, 10, 30, 40, 49, 60, 82, 87, 90, 92, 102, 109, 114, 121, 162, 172, 183, 186, 189, 200, 211, 214, 222, 229, 234, 250, 252, 258, 261, 304, 324, 357, 371, 387, 390, 405, 409, 412, 414, 416, 420, 459, 466, 472, 475, 477, 490, 501, 503, 505, 507, 519, 528, 530, 534, 539, 558, 560, 563, 565, 585, 591, 598, 601, 604, 606, 610, 613, 618, 620, 622, 624, 633, 651, 658, 661, 668, 670, 672, 676, 694, 712, 724, 740]
+  },
+  "seqStart": 60,
+  "seqEnd": 784,
+  "barcode": "barcode_13r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/834/ccs",
+  "sequenceLength": 785,
+  "referenceLength": 649,
+  "referenceName": "cebpa_b",
+  "alignment": {
+    "mismatches": 15,
+    "gaps": 0,
+    "direction": "Reverse Complement",
+    "length": 653
+  },
+  "bisulfite": {
+    "convertedCpH": 157,
+    "unconvertedCpH": 1,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 10,
+    "methylatedCpGSites": 79,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "U", "M", "M", "M", "M", "U", "U", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [8, 15, 18, 33, 35, 40, 43, 46, 49, 57, 70, 74, 76, 80, 82, 90, 95, 97, 106, 111, 113, 116, 134, 142, 144, 147, 161, 166, 179, 186, 189, 192, 194, 197, 214, 219, 223, 233, 236, 244, 246, 254, 257, 259, 275, 277, 280, 285, 293, 302, 304, 317, 319, 322, 326, 338, 344, 349, 353, 356, 362, 364, 370, 376, 382, 413, 417, 429, 433, 452, 462, 480, 487, 513, 515, 550, 556, 558, 563, 577, 587, 599, 611, 620, 622, 624, 639, 641, 652]
+  },
+  "seqStart": 65,
+  "seqEnd": 717,
+  "barcode": "barcode_29R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/846/ccs",
+  "sequenceLength": 959,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 20,
+    "gaps": 2,
+    "direction": "Forward",
+    "length": 831
+  },
+  "bisulfite": {
+    "convertedCpH": 207,
+    "unconvertedCpH": 6,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 8,
+    "methylatedCpGSites": 79,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "U", "M", "M", "M", "U", "-", "M", "M", "M", "M", "M", "M", "U", "M", "M", "U", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "-", "M"],
+    "reference": [1, 35, 37, 47, 52, 58, 61, 75, 84, 92, 95, 97, 154, 159, 165, 173, 179, 191, 198, 202, 217, 237, 240, 242, 261, 288, 293, 308, 321, 325, 328, 357, 363, 377, 380, 395, 402, 405, 411, 431, 443, 452, 459, 468, 476, 482, 490, 520, 525, 536, 542, 547, 550, 560, 578, 580, 586, 601, 604, 612, 615, 625, 628, 634, 636, 638, 650, 652, 654, 660, 699, 703, 708, 712, 733, 738, 744, 750, 758, 760, 771, 779, 781, 784, 787, 801, 813, 828, 830]
+  },
+  "seqStart": 64,
+  "seqEnd": 892,
+  "barcode": "barcode_15F"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/848/ccs",
+  "sequenceLength": 849,
+  "referenceLength": 655,
+  "referenceName": "P16",
+  "alignment": {
+    "mismatches": 45,
+    "gaps": 2,
+    "direction": "Reverse Complement",
+    "length": 659
+  },
+  "bisulfite": {
+    "convertedCpH": 110,
+    "unconvertedCpH": 4,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 38,
+    "methylatedCpGSites": 18,
+    "sequence": ["M", "M", "M", "M", "M", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "M", "M", "U", "M", "M", "M", "M", "M", "M", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "M", "U", "U", "U", "U", "M", "U", "U", "U"],
+    "reference": [1, 8, 13, 23, 28, 38, 44, 56, 60, 75, 81, 86, 88, 92, 110, 131, 134, 137, 156, 159, 163, 185, 191, 194, 199, 203, 205, 210, 255, 264, 279, 310, 312, 335, 338, 344, 352, 373, 384, 405, 426, 439, 452, 464, 512, 519, 538, 541, 549, 565, 577, 601, 607, 613, 626, 628]
+  },
+  "seqStart": 64,
+  "seqEnd": 720,
+  "barcode": "barcode_14R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/850/ccs",
+  "sequenceLength": 880,
+  "referenceLength": 720,
+  "referenceName": "APAF1",
+  "alignment": {
+    "mismatches": 87,
+    "gaps": 1,
+    "direction": "Reverse Complement",
+    "length": 723
+  },
+  "bisulfite": {
+    "convertedCpH": 112,
+    "unconvertedCpH": 26,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 78,
+    "methylatedCpGSites": 5,
+    "sequence": ["U", "U", "M", "U", "U", "U", "U", "M", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [4, 8, 28, 39, 48, 59, 80, 85, 88, 90, 108, 113, 163, 173, 184, 187, 190, 201, 212, 215, 223, 230, 235, 251, 254, 259, 262, 304, 320, 328, 345, 358, 374, 377, 392, 396, 399, 401, 403, 407, 444, 451, 457, 460, 462, 475, 486, 488, 490, 492, 504, 513, 515, 519, 524, 543, 545, 548, 550, 565, 571, 578, 581, 584, 586, 590, 593, 598, 600, 602, 604, 613, 631, 638, 641, 648, 650, 652, 656, 674, 691, 704, 720]
+  },
+  "seqStart": 66,
+  "seqEnd": 787,
+  "barcode": "barcode_22R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/851/ccs",
+  "sequenceLength": 852,
+  "referenceLength": 655,
+  "referenceName": "P16",
+  "alignment": {
+    "mismatches": 1,
+    "gaps": 0,
+    "direction": "Forward",
+    "length": 655
+  },
+  "bisulfite": {
+    "convertedCpH": 111,
+    "unconvertedCpH": 3,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 1,
+    "methylatedCpGSites": 55,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [31, 33, 46, 51, 57, 81, 93, 109, 117, 119, 139, 146, 194, 206, 219, 232, 253, 274, 285, 306, 314, 320, 323, 346, 348, 379, 394, 403, 448, 453, 455, 459, 463, 466, 472, 494, 498, 501, 519, 522, 525, 546, 564, 568, 570, 575, 581, 596, 600, 612, 618, 628, 633, 643, 647, 654]
+  },
+  "seqStart": 133,
+  "seqEnd": 787,
+  "barcode": "barcode_31F"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/855/ccs",
+  "sequenceLength": 875,
+  "referenceLength": 720,
+  "referenceName": "APAF1",
+  "alignment": {
+    "mismatches": 100,
+    "gaps": 14,
+    "direction": "Reverse Complement",
+    "length": 718
+  },
+  "bisulfite": {
+    "convertedCpH": 131,
+    "unconvertedCpH": 5,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 80,
+    "methylatedCpGSites": 1,
+    "sequence": ["U", "U", "-", "-", "-", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "-", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [1, 6, 10, 30, 40, 49, 60, 81, 86, 89, 91, 101, 108, 113, 120, 161, 171, 182, 185, 188, 199, 210, 213, 221, 228, 233, 249, 251, 256, 259, 301, 317, 325, 342, 355, 371, 374, 389, 393, 396, 398, 400, 404, 441, 448, 454, 457, 459, 472, 483, 485, 487, 489, 501, 510, 512, 516, 521, 540, 542, 545, 547, 562, 568, 575, 578, 581, 583, 587, 590, 595, 597, 599, 601, 610, 628, 635, 638, 645, 647, 649, 653, 671, 688, 700, 716]
+  },
+  "seqStart": 62,
+  "seqEnd": 765,
+  "barcode": "barcode_7r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/863/ccs",
+  "sequenceLength": 878,
+  "referenceLength": 720,
+  "referenceName": "APAF1",
+  "alignment": {
+    "mismatches": 6,
+    "gaps": 1,
+    "direction": "Forward",
+    "length": 719
+  },
+  "bisulfite": {
+    "convertedCpH": 134,
+    "unconvertedCpH": 3,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 84,
+    "methylatedCpGSites": 1,
+    "sequence": ["U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [14, 27, 44, 62, 66, 68, 70, 77, 80, 87, 105, 114, 116, 118, 120, 125, 128, 132, 134, 137, 140, 147, 153, 168, 170, 173, 175, 195, 200, 204, 206, 215, 227, 229, 231, 233, 244, 257, 259, 262, 268, 275, 312, 316, 318, 320, 323, 327, 342, 345, 361, 374, 391, 399, 415, 457, 460, 466, 468, 484, 489, 496, 504, 507, 519, 530, 533, 536, 547, 557, 598, 605, 610, 618, 628, 630, 633, 638, 659, 670, 679, 689, 709, 713, 718]
+  },
+  "seqStart": 100,
+  "seqEnd": 817,
+  "barcode": "barcode_20F"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/864/ccs",
+  "sequenceLength": 851,
+  "referenceLength": 655,
+  "referenceName": "P16",
+  "alignment": {
+    "mismatches": 8,
+    "gaps": 2,
+    "direction": "Forward",
+    "length": 658
+  },
+  "bisulfite": {
+    "convertedCpH": 109,
+    "unconvertedCpH": 4,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 1,
+    "methylatedCpGSites": 54,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 32, 34, 47, 52, 58, 82, 94, 111, 119, 121, 140, 147, 196, 208, 222, 235, 256, 277, 288, 309, 317, 323, 326, 349, 351, 382, 397, 406, 452, 457, 459, 463, 467, 470, 476, 498, 502, 505, 523, 526, 529, 550, 568, 572, 574, 579, 585, 600, 604, 623, 633, 638, 648, 652]
+  },
+  "seqStart": 130,
+  "seqEnd": 785,
+  "barcode": "barcode_10f"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/871/ccs",
+  "sequenceLength": 938,
+  "referenceLength": 649,
+  "referenceName": "cebpa_b",
+  "alignment": {
+    "mismatches": 19,
+    "gaps": 4,
+    "direction": "Reverse Complement",
+    "length": 659
+  },
+  "bisulfite": {
+    "convertedCpH": 153,
+    "unconvertedCpH": 3,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 1,
+    "methylatedCpGSites": 88,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "-", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 9, 16, 19, 33, 35, 41, 44, 47, 50, 58, 71, 75, 77, 81, 83, 91, 96, 98, 107, 112, 114, 117, 135, 143, 145, 148, 163, 168, 181, 188, 191, 194, 196, 199, 216, 218, 220, 224, 234, 237, 245, 247, 255, 258, 260, 276, 278, 281, 286, 293, 303, 305, 318, 320, 323, 327, 339, 345, 350, 354, 357, 363, 365, 371, 378, 384, 416, 434, 438, 458, 469, 487, 494, 520, 522, 557, 563, 565, 570, 584, 594, 606, 617, 626, 628, 630, 645, 647, 658]
+  },
+  "seqStart": 64,
+  "seqEnd": 718,
+  "barcode": "barcode_30R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/889/ccs",
+  "sequenceLength": 971,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 69,
+    "gaps": 16,
+    "direction": "Reverse Complement",
+    "length": 843
+  },
+  "bisulfite": {
+    "convertedCpH": 203,
+    "unconvertedCpH": 7,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 6,
+    "methylatedCpGSites": 73,
+    "sequence": ["M", "M", "M", "U", "U", "U", "U", "U", "M", "M", "M", "-", "M", "M", "-", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "-", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "-", "M", "M", "M", "M", "M", "M", "-", "M", "M", "M", "M", "M", "M", "M", "M", "C", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 3, 18, 25, 28, 42, 45, 48, 50, 57, 68, 70, 77, 83, 89, 94, 115, 119, 125, 129, 168, 173, 175, 177, 189, 191, 193, 203, 213, 216, 224, 227, 242, 248, 250, 273, 287, 292, 298, 308, 313, 344, 353, 358, 365, 374, 381, 390, 402, 423, 429, 432, 438, 453, 456, 470, 477, 506, 509, 513, 525, 540, 573, 593, 595, 598, 619, 636, 640, 647, 660, 668, 676, 683, 688, 744, 746, 749, 756, 766, 780, 783, 789, 805, 808, 842]
+  },
+  "seqStart": 71,
+  "seqEnd": 897,
+  "barcode": "barcode_17R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/895/ccs",
+  "sequenceLength": 868,
+  "referenceLength": 720,
+  "referenceName": "APAF1",
+  "alignment": {
+    "mismatches": 100,
+    "gaps": 7,
+    "direction": "Reverse Complement",
+    "length": 725
+  },
+  "bisulfite": {
+    "convertedCpH": 132,
+    "unconvertedCpH": 4,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 79,
+    "methylatedCpGSites": 4,
+    "sequence": ["U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [1, 6, 10, 30, 40, 50, 61, 82, 87, 90, 92, 102, 109, 114, 121, 162, 172, 183, 186, 189, 200, 211, 214, 222, 229, 234, 250, 252, 257, 260, 302, 318, 327, 344, 357, 373, 376, 391, 395, 398, 400, 402, 406, 443, 450, 456, 459, 461, 474, 485, 487, 489, 491, 503, 512, 514, 518, 523, 542, 544, 547, 549, 564, 570, 577, 580, 583, 585, 589, 592, 597, 599, 602, 604, 614, 632, 639, 642, 649, 651, 653, 657, 675, 693, 706, 722]
+  },
+  "seqStart": 58,
+  "seqEnd": 775,
+  "barcode": "barcode_28R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/906/ccs",
+  "sequenceLength": 853,
+  "referenceLength": 655,
+  "referenceName": "P16",
+  "alignment": {
+    "mismatches": 14,
+    "gaps": 3,
+    "direction": "Reverse Complement",
+    "length": 666
+  },
+  "bisulfite": {
+    "convertedCpH": 102,
+    "unconvertedCpH": 12,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 0,
+    "methylatedCpGSites": 56,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 8, 12, 22, 27, 37, 43, 55, 59, 74, 80, 85, 87, 91, 109, 130, 133, 136, 154, 157, 161, 183, 189, 192, 197, 201, 203, 208, 254, 263, 278, 309, 311, 338, 346, 354, 375, 386, 407, 429, 442, 455, 467, 517, 524, 544, 546, 555, 571, 584, 608, 614, 619, 632, 634, 665]
+  },
+  "seqStart": 64,
+  "seqEnd": 726,
+  "barcode": "barcode_2r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/925/ccs",
+  "sequenceLength": 942,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 97,
+    "gaps": 7,
+    "direction": "Reverse Complement",
+    "length": 822
+  },
+  "bisulfite": {
+    "convertedCpH": 208,
+    "unconvertedCpH": 3,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 77,
+    "methylatedCpGSites": 6,
+    "sequence": ["U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "-", "U", "U", "U", "M", "U", "-", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "M", "M", "U", "U", "M"],
+    "reference": [1, 3, 18, 25, 28, 42, 45, 48, 50, 57, 68, 70, 77, 83, 89, 94, 115, 119, 124, 128, 166, 171, 173, 175, 187, 189, 198, 201, 211, 214, 222, 225, 240, 246, 248, 266, 276, 279, 284, 290, 300, 305, 335, 343, 348, 355, 364, 371, 380, 392, 412, 418, 421, 427, 442, 445, 459, 465, 493, 496, 500, 512, 527, 532, 560, 579, 581, 584, 604, 619, 623, 630, 642, 648, 656, 662, 667, 723, 725, 736, 745, 760, 763, 769, 774, 787, 821]
+  },
+  "seqStart": 64,
+  "seqEnd": 878,
+  "barcode": "barcode_10r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/928/ccs",
+  "sequenceLength": 768,
+  "referenceLength": 649,
+  "referenceName": "cebpa_b",
+  "alignment": {
+    "mismatches": 93,
+    "gaps": 12,
+    "direction": "Reverse Complement",
+    "length": 652
+  },
+  "bisulfite": {
+    "convertedCpH": 153,
+    "unconvertedCpH": 1,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 65,
+    "methylatedCpGSites": 18,
+    "sequence": ["U", "U", "U", "U", "U", "-", "U", "U", "U", "U", "-", "-", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "U", "U", "U", "U", "U", "U", "U", "-", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "C", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "M", "M", "U", "M", "M", "M", "U", "-", "U", "U", "U", "M", "U", "U", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 9, 17, 20, 35, 37, 42, 45, 48, 51, 59, 72, 76, 78, 82, 84, 92, 97, 99, 108, 113, 115, 118, 136, 144, 146, 164, 169, 182, 189, 192, 195, 197, 200, 217, 219, 221, 225, 235, 238, 246, 248, 256, 259, 261, 277, 279, 282, 287, 294, 303, 305, 318, 320, 323, 327, 339, 345, 350, 354, 357, 363, 365, 371, 377, 383, 413, 417, 429, 433, 452, 462, 480, 487, 513, 515, 550, 556, 558, 563, 577, 587, 599, 610, 619, 621, 623, 638, 640, 651]
+  },
+  "seqStart": 62,
+  "seqEnd": 701,
+  "barcode": "barcode_26R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/930/ccs",
+  "sequenceLength": 870,
+  "referenceLength": 655,
+  "referenceName": "P16",
+  "alignment": {
+    "mismatches": 29,
+    "gaps": 3,
+    "direction": "Forward",
+    "length": 674
+  },
+  "bisulfite": {
+    "convertedCpH": 111,
+    "unconvertedCpH": 3,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 48,
+    "methylatedCpGSites": 1,
+    "sequence": ["U", "G", "U", "U", "U", "U", "U", "-", "U", "U", "U", "U", "U", "U", "U", "G", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "-", "U", "U", "U", "U", "U", "G", "U", "U", "U", "G", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [32, 35, 48, 53, 59, 84, 97, 114, 122, 124, 143, 150, 199, 211, 224, 238, 260, 282, 293, 315, 323, 329, 332, 355, 357, 391, 406, 415, 462, 467, 469, 473, 477, 480, 486, 509, 513, 516, 534, 538, 541, 563, 581, 585, 587, 592, 598, 613, 617, 629, 635, 645, 662, 666, 673]
+  },
+  "seqStart": 134,
+  "seqEnd": 804,
+  "barcode": "barcode_13f"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/931/ccs",
+  "sequenceLength": 947,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 81,
+    "gaps": 0,
+    "direction": "Reverse Complement",
+    "length": 820
+  },
+  "bisulfite": {
+    "convertedCpH": 206,
+    "unconvertedCpH": 7,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 74,
+    "methylatedCpGSites": 13,
+    "sequence": ["U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "M", "M", "M", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "M", "M", "M", "M", "U", "M", "U", "M"],
+    "reference": [1, 3, 18, 25, 28, 42, 45, 48, 50, 57, 68, 70, 77, 83, 89, 94, 116, 120, 125, 129, 167, 172, 174, 176, 188, 190, 192, 198, 201, 211, 214, 222, 225, 247, 249, 267, 277, 280, 285, 291, 301, 338, 346, 351, 358, 367, 374, 383, 395, 415, 421, 424, 430, 445, 448, 462, 468, 496, 499, 503, 515, 530, 535, 562, 581, 583, 586, 606, 621, 625, 632, 644, 650, 658, 664, 669, 725, 727, 730, 737, 746, 759, 762, 768, 773, 784, 786]
+  },
+  "seqStart": 64,
+  "seqEnd": 883,
+  "barcode": "barcode_8r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/933/ccs",
+  "sequenceLength": 935,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 124,
+    "gaps": 25,
+    "direction": "Reverse Complement",
+    "length": 842
+  },
+  "bisulfite": {
+    "convertedCpH": 196,
+    "unconvertedCpH": 8,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 37,
+    "methylatedCpGSites": 36,
+    "sequence": ["M", "U", "U", "U", "M", "-", "-", "U", "M", "M", "C", "M", "M", "U", "U", "M", "U", "-", "U", "-", "U", "C", "U", "M", "M", "M", "U", "M", "M", "M", "U", "M", "U", "U", "-", "U", "U", "U", "U", "-", "U", "U", "U", "U", "-", "U", "U", "U", "U", "U", "M", "M", "M", "M", "M", "M", "-", "U", "U", "-", "U", "M", "M", "U", "U", "U", "U", "U", "U", "U", "M", "C", "M", "M", "M", "M", "C", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 3, 18, 25, 28, 42, 45, 48, 50, 57, 69, 79, 85, 92, 97, 120, 124, 129, 133, 171, 176, 178, 180, 193, 195, 197, 203, 206, 216, 219, 227, 230, 245, 251, 253, 271, 282, 285, 290, 296, 306, 311, 341, 349, 354, 361, 370, 377, 386, 398, 420, 426, 429, 435, 451, 454, 468, 474, 511, 523, 538, 543, 572, 592, 594, 597, 617, 632, 636, 644, 664, 672, 678, 683, 744, 746, 749, 756, 765, 778, 781, 788, 793, 805, 807, 841]
+  },
+  "seqStart": 53,
+  "seqEnd": 869,
+  "barcode": "barcode_30F"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/939/ccs",
+  "sequenceLength": 974,
+  "referenceLength": 649,
+  "referenceName": "cebpa_b",
+  "alignment": {
+    "mismatches": 213,
+    "gaps": 91,
+    "direction": "Reverse Complement",
+    "length": 659
+  },
+  "bisulfite": {
+    "convertedCpH": 126,
+    "unconvertedCpH": 12,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 8,
+    "methylatedCpGSites": 46,
+    "sequence": ["M", "M", "-", "T", "T", "C", "M", "M", "M", "M", "-", "-", "U", "M", "M", "C", "M", "U", "-", "T", "M", "M", "T", "M", "-", "U", "M", "-", "-", "U", "M", "U", "M", "M", "M", "-", "-", "-", "U", "-", "-", "T", "C", "T", "U", "M", "-", "-", "U", "-", "M", "T", "M", "M", "M", "C", "M", "-", "M", "-", "M", "U", "U", "U", "U", "-", "C", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "-", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 9, 16, 19, 33, 35, 40, 43, 46, 49, 57, 70, 74, 76, 80, 82, 90, 95, 97, 106, 111, 113, 116, 134, 142, 144, 147, 161, 166, 179, 186, 189, 192, 194, 197, 214, 216, 218, 222, 232, 235, 243, 245, 253, 256, 258, 274, 276, 279, 284, 291, 300, 302, 315, 317, 320, 324, 336, 342, 347, 351, 354, 360, 362, 368, 374, 380, 410, 414, 427, 455, 466, 485, 492, 520, 522, 557, 563, 565, 570, 584, 594, 606, 617, 626, 628, 630, 645, 647, 658]
+  },
+  "seqStart": 337,
+  "seqEnd": 904,
+  "barcode": "barcode_19R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/986/ccs",
+  "sequenceLength": 696,
+  "referenceLength": 655,
+  "referenceName": "P16",
+  "alignment": {
+    "mismatches": 9,
+    "gaps": 0,
+    "direction": "Reverse Complement",
+    "length": 633
+  },
+  "bisulfite": {
+    "convertedCpH": 106,
+    "unconvertedCpH": 6,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 3,
+    "methylatedCpGSites": 52,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "U", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M"],
+    "reference": [1, 8, 12, 22, 27, 37, 43, 55, 59, 74, 80, 85, 87, 91, 109, 130, 133, 136, 154, 157, 161, 183, 189, 192, 196, 200, 202, 207, 253, 262, 277, 308, 310, 333, 336, 342, 350, 371, 382, 403, 424, 438, 451, 463, 512, 519, 538, 540, 548, 564, 576, 600, 606, 611, 624, 626]
+  },
+  "seqStart": 63,
+  "seqEnd": 695,
+  "barcode": "barcode_28R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/1018/ccs",
+  "sequenceLength": 875,
+  "referenceLength": 720,
+  "referenceName": "APAF1",
+  "alignment": {
+    "mismatches": 91,
+    "gaps": 4,
+    "direction": "Reverse Complement",
+    "length": 720
+  },
+  "bisulfite": {
+    "convertedCpH": 132,
+    "unconvertedCpH": 5,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 77,
+    "methylatedCpGSites": 6,
+    "sequence": ["-", "-", "M", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [1, 6, 10, 30, 40, 49, 60, 81, 86, 89, 91, 101, 108, 113, 120, 161, 171, 182, 185, 188, 211, 214, 222, 229, 234, 250, 252, 257, 260, 302, 318, 326, 343, 356, 372, 375, 390, 394, 397, 399, 401, 405, 442, 449, 455, 458, 460, 473, 484, 486, 488, 490, 502, 511, 513, 517, 522, 541, 543, 546, 548, 563, 569, 576, 579, 582, 584, 588, 591, 596, 598, 600, 602, 611, 629, 636, 639, 646, 648, 650, 654, 672, 689, 701, 717]
+  },
+  "seqStart": 67,
+  "seqEnd": 782,
+  "barcode": "barcode_18R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/1022/ccs",
+  "sequenceLength": 790,
+  "referenceLength": 649,
+  "referenceName": "cebpa_b",
+  "alignment": {
+    "mismatches": 12,
+    "gaps": 0,
+    "direction": "Forward",
+    "length": 657
+  },
+  "bisulfite": {
+    "convertedCpH": 156,
+    "unconvertedCpH": 1,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 46,
+    "methylatedCpGSites": 37,
+    "sequence": ["U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "M", "U", "M", "M", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "M", "M", "U", "U", "U", "U", "U", "U", "U", "M", "M", "M", "M", "U", "U", "M", "M", "U", "U", "M", "U", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "U", "M", "M", "M", "U", "U", "U", "M", "M", "M", "M", "U", "U", "U", "U"],
+    "reference": [11, 13, 28, 30, 32, 41, 52, 64, 74, 88, 93, 95, 101, 136, 138, 165, 172, 190, 200, 219, 223, 235, 239, 269, 275, 288, 290, 296, 299, 303, 308, 314, 326, 330, 333, 335, 348, 350, 367, 372, 375, 377, 393, 395, 398, 406, 408, 416, 419, 429, 433, 435, 437, 454, 457, 463, 466, 473, 486, 492, 510, 512, 521, 539, 542, 544, 549, 558, 560, 565, 573, 575, 579, 581, 585, 599, 608, 611, 614, 623, 640, 643, 650]
+  },
+  "seqStart": 69,
+  "seqEnd": 725,
+  "barcode": "barcode_18F"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/1024/ccs",
+  "sequenceLength": 868,
+  "referenceLength": 720,
+  "referenceName": "APAF1",
+  "alignment": {
+    "mismatches": 83,
+    "gaps": 2,
+    "direction": "Reverse Complement",
+    "length": 719
+  },
+  "bisulfite": {
+    "convertedCpH": 137,
+    "unconvertedCpH": 0,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 81,
+    "methylatedCpGSites": 5,
+    "sequence": ["U", "M", "U", "M", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U"],
+    "reference": [1, 6, 10, 30, 40, 49, 60, 81, 86, 89, 91, 101, 108, 113, 120, 161, 171, 182, 185, 188, 199, 210, 213, 221, 228, 233, 249, 251, 256, 259, 301, 317, 325, 342, 355, 371, 374, 389, 393, 396, 398, 400, 404, 441, 448, 454, 457, 459, 472, 483, 485, 487, 489, 501, 510, 512, 516, 521, 540, 542, 545, 547, 562, 568, 575, 578, 581, 583, 587, 590, 595, 597, 599, 601, 610, 628, 635, 638, 645, 647, 649, 653, 671, 688, 700, 716]
+  },
+  "seqStart": 59,
+  "seqEnd": 775,
+  "barcode": "barcode_12r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/1029/ccs",
+  "sequenceLength": 782,
+  "referenceLength": 649,
+  "referenceName": "cebpa_b",
+  "alignment": {
+    "mismatches": 15,
+    "gaps": 4,
+    "direction": "Forward",
+    "length": 656
+  },
+  "bisulfite": {
+    "convertedCpH": 153,
+    "unconvertedCpH": 3,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 84,
+    "methylatedCpGSites": 2,
+    "sequence": ["U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "U", "U", "U", "-", "U", "U", "U", "U", "U", "U", "U", "G", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [11, 13, 28, 30, 32, 41, 52, 64, 74, 88, 93, 95, 102, 139, 141, 167, 174, 192, 202, 221, 225, 237, 241, 272, 278, 284, 290, 292, 299, 302, 306, 311, 317, 329, 333, 336, 352, 354, 363, 370, 375, 378, 380, 396, 398, 401, 409, 411, 419, 422, 432, 436, 438, 440, 457, 460, 462, 465, 468, 475, 488, 493, 507, 510, 512, 520, 538, 542, 544, 549, 558, 560, 565, 573, 575, 579, 581, 585, 599, 607, 610, 613, 616, 621, 623, 637, 640, 647, 655]
+  },
+  "seqStart": 70,
+  "seqEnd": 721,
+  "barcode": "barcode_10f"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/1030/ccs",
+  "sequenceLength": 876,
+  "referenceLength": 720,
+  "referenceName": "APAF1",
+  "alignment": {
+    "mismatches": 90,
+    "gaps": 2,
+    "direction": "Reverse Complement",
+    "length": 723
+  },
+  "bisulfite": {
+    "convertedCpH": 133,
+    "unconvertedCpH": 5,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 78,
+    "methylatedCpGSites": 5,
+    "sequence": ["U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [1, 6, 10, 30, 40, 49, 60, 81, 86, 89, 91, 101, 108, 113, 120, 162, 172, 183, 186, 189, 200, 211, 214, 222, 229, 234, 250, 252, 257, 260, 302, 319, 327, 344, 357, 373, 376, 391, 395, 398, 400, 402, 406, 443, 450, 456, 459, 461, 486, 488, 490, 492, 504, 513, 515, 519, 524, 543, 545, 548, 550, 565, 571, 578, 581, 584, 586, 590, 593, 598, 600, 602, 604, 613, 631, 638, 641, 648, 650, 652, 656, 674, 691, 704, 720]
+  },
+  "seqStart": 63,
+  "seqEnd": 783,
+  "barcode": "barcode_28R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/1040/ccs",
+  "sequenceLength": 788,
+  "referenceLength": 649,
+  "referenceName": "cebpa_b",
+  "alignment": {
+    "mismatches": 12,
+    "gaps": 0,
+    "direction": "Reverse Complement",
+    "length": 658
+  },
+  "bisulfite": {
+    "convertedCpH": 155,
+    "unconvertedCpH": 3,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 3,
+    "methylatedCpGSites": 86,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 9, 16, 19, 33, 35, 40, 43, 46, 49, 57, 70, 74, 76, 80, 82, 90, 95, 97, 106, 111, 113, 116, 134, 143, 145, 148, 162, 167, 180, 187, 190, 193, 199, 216, 218, 220, 224, 234, 237, 245, 247, 255, 258, 260, 276, 278, 281, 286, 293, 302, 304, 317, 319, 322, 326, 338, 344, 349, 353, 358, 364, 366, 372, 378, 384, 415, 419, 431, 435, 454, 465, 483, 490, 517, 519, 554, 560, 562, 567, 582, 592, 604, 625, 627, 629, 644, 646, 657]
+  },
+  "seqStart": 63,
+  "seqEnd": 720,
+  "barcode": "barcode_12r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/1049/ccs",
+  "sequenceLength": 937,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 8,
+    "gaps": 5,
+    "direction": "Reverse Complement",
+    "length": 816
+  },
+  "bisulfite": {
+    "convertedCpH": 209,
+    "unconvertedCpH": 3,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 2,
+    "methylatedCpGSites": 87,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "-", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 3, 18, 25, 28, 42, 45, 48, 50, 57, 68, 70, 77, 83, 89, 94, 115, 119, 124, 128, 166, 171, 173, 175, 187, 189, 191, 197, 200, 210, 213, 221, 224, 239, 245, 247, 265, 275, 278, 283, 289, 299, 304, 334, 342, 347, 354, 363, 370, 379, 391, 411, 417, 420, 426, 441, 444, 458, 464, 492, 495, 499, 511, 526, 531, 558, 577, 579, 582, 602, 617, 621, 628, 640, 646, 654, 660, 665, 721, 723, 726, 733, 742, 755, 758, 764, 769, 779, 781, 815]
+  },
+  "seqStart": 64,
+  "seqEnd": 874,
+  "barcode": "barcode_24R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/1095/ccs",
+  "sequenceLength": 32,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 10,
+    "gaps": 7,
+    "direction": "Reverse Complement",
+    "length": 39
+  },
+  "bisulfite": {
+    "convertedCpH": 6,
+    "unconvertedCpH": 2,
+    "direction": "G => A"
+  },
+  "methylation": {
+    "cpGSites": 1,
+    "methylatedCpGSites": 1,
+    "sequence": ["M", "U"],
+    "reference": [6, 12]
+  },
+  "seqStart": 1,
+  "seqEnd": 32,
+  "barcode": "barcode_19R"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/1119/ccs",
+  "sequenceLength": 934,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 14,
+    "gaps": 9,
+    "direction": "Forward",
+    "length": 820
+  },
+  "bisulfite": {
+    "convertedCpH": 202,
+    "unconvertedCpH": 8,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 39,
+    "methylatedCpGSites": 47,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "U", "-", "U", "U", "U", "M", "U", "M", "M", "M", "M", "M", "M", "U", "-", "U", "M", "U", "M", "M", "M", "M", "M", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "-", "M", "U", "M", "M", "M", "U", "M", "U", "M", "U", "M", "U", "U", "U", "U", "M", "U", "U", "U", "U", "M", "M", "U", "U", "U", "U", "U", "U", "U", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "U", "M"],
+    "reference": [1, 35, 37, 47, 52, 58, 61, 74, 83, 90, 93, 95, 151, 156, 162, 170, 176, 188, 195, 199, 214, 234, 237, 239, 258, 285, 290, 305, 317, 321, 324, 352, 358, 372, 375, 390, 396, 399, 405, 425, 437, 446, 453, 462, 469, 474, 482, 512, 517, 527, 533, 538, 541, 551, 569, 571, 577, 592, 595, 603, 606, 620, 626, 628, 630, 642, 644, 646, 652, 690, 694, 699, 703, 724, 729, 735, 741, 748, 751, 762, 769, 771, 774, 777, 792, 795, 802, 817, 819]
+  },
+  "seqStart": 62,
+  "seqEnd": 872,
+  "barcode": "barcode_4f"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/1125/ccs",
+  "sequenceLength": 753,
+  "referenceLength": 655,
+  "referenceName": "P16",
+  "alignment": {
+    "mismatches": 62,
+    "gaps": 5,
+    "direction": "Reverse Complement",
+    "length": 655
+  },
+  "bisulfite": {
+    "convertedCpH": 108,
+    "unconvertedCpH": 5,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 45,
+    "methylatedCpGSites": 7,
+    "sequence": ["M", "M", "M", "M", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "-", "U", "U", "U", "U", "U", "-", "U", "C", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U"],
+    "reference": [1, 8, 12, 22, 27, 37, 43, 55, 59, 74, 80, 85, 87, 91, 110, 131, 134, 137, 155, 158, 162, 184, 190, 193, 197, 201, 203, 208, 253, 262, 277, 308, 310, 333, 336, 342, 350, 371, 382, 403, 424, 451, 463, 512, 519, 538, 540, 548, 564, 576, 600, 606, 611, 624, 626]
+  },
+  "seqStart": 65,
+  "seqEnd": 714,
+  "barcode": "barcode_6r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/1130/ccs",
+  "sequenceLength": 854,
+  "referenceLength": 655,
+  "referenceName": "P16",
+  "alignment": {
+    "mismatches": 60,
+    "gaps": 2,
+    "direction": "Reverse Complement",
+    "length": 665
+  },
+  "bisulfite": {
+    "convertedCpH": 109,
+    "unconvertedCpH": 5,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 43,
+    "methylatedCpGSites": 10,
+    "sequence": ["M", "M", "M", "M", "M", "U", "M", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "U"],
+    "reference": [1, 9, 13, 23, 28, 38, 44, 57, 61, 77, 83, 88, 90, 94, 112, 133, 136, 139, 162, 166, 188, 194, 197, 201, 205, 207, 258, 267, 283, 315, 317, 340, 343, 349, 357, 378, 389, 410, 431, 444, 457, 469, 518, 525, 544, 546, 554, 570, 583, 608, 614, 619, 632, 634]
+  },
+  "seqStart": 64,
+  "seqEnd": 726,
+  "barcode": "barcode_6r"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/1134/ccs",
+  "sequenceLength": 762,
+  "referenceLength": 649,
+  "referenceName": "cebpa_b",
+  "alignment": {
+    "mismatches": 18,
+    "gaps": 7,
+    "direction": "Forward",
+    "length": 657
+  },
+  "bisulfite": {
+    "convertedCpH": 152,
+    "unconvertedCpH": 2,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 1,
+    "methylatedCpGSites": 83,
+    "sequence": ["M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "-", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "-", "G", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "G", "M", "M", "M", "M", "M", "M", "M", "M", "M"],
+    "reference": [1, 12, 14, 32, 34, 43, 54, 66, 76, 90, 95, 97, 103, 138, 140, 166, 173, 191, 201, 220, 224, 236, 240, 272, 278, 284, 291, 294, 300, 303, 307, 319, 331, 335, 338, 341, 354, 356, 365, 372, 381, 383, 399, 401, 404, 412, 414, 422, 425, 435, 439, 441, 443, 460, 463, 465, 468, 471, 478, 491, 496, 510, 513, 515, 523, 541, 544, 546, 551, 560, 562, 567, 575, 577, 581, 583, 587, 600, 608, 611, 614, 617, 622, 624, 638, 641, 648, 656]
+  },
+  "seqStart": 69,
+  "seqEnd": 718,
+  "barcode": "barcode_20F"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/1164/ccs",
+  "sequenceLength": 676,
+  "referenceLength": 649,
+  "referenceName": "cebpa_b",
+  "alignment": {
+    "mismatches": 9,
+    "gaps": 1,
+    "direction": "Forward",
+    "length": 609
+  },
+  "bisulfite": {
+    "convertedCpH": 144,
+    "unconvertedCpH": 3,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 7,
+    "methylatedCpGSites": 70,
+    "sequence": ["M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "U", "U", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "U", "M", "M", "U", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "M", "-"],
+    "reference": [1, 12, 14, 29, 31, 55, 67, 77, 91, 96, 98, 104, 141, 144, 170, 177, 195, 205, 224, 228, 240, 244, 274, 287, 293, 302, 305, 309, 315, 321, 333, 337, 340, 342, 355, 357, 366, 373, 378, 381, 383, 399, 401, 404, 412, 414, 422, 425, 435, 439, 441, 443, 460, 463, 465, 468, 471, 478, 491, 496, 510, 513, 515, 523, 541, 544, 546, 551, 560, 562, 567, 575, 577, 581, 583, 587, 600, 608]
+  },
+  "seqStart": 69,
+  "seqEnd": 676,
+  "barcode": "barcode_13f"
+}, {
+  "sequenceName": "m140801_003556_42177R_c100668802550000001823128802061551_s1_p0/1165/ccs",
+  "sequenceLength": 1780,
+  "referenceLength": 816,
+  "referenceName": "cebpa_a",
+  "alignment": {
+    "mismatches": 107,
+    "gaps": 14,
+    "direction": "Reverse Complement",
+    "length": 827
+  },
+  "bisulfite": {
+    "convertedCpH": 204,
+    "unconvertedCpH": 7,
+    "direction": "C => T"
+  },
+  "methylation": {
+    "cpGSites": 62,
+    "methylatedCpGSites": 14,
+    "sequence": ["U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "U", "-", "U", "-", "-", "U", "U", "U", "U", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "U", "U", "M", "U", "U", "U", "M", "U", "-", "M", "M", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "U", "M", "M", "U", "U", "U", "U", "U", "U", "U", "U", "U", "-", "U", "C", "U", "M", "M", "M", "M", "M", "U", "U"],
+    "reference": [1, 3, 18, 25, 28, 42, 45, 48, 50, 57, 68, 70, 77, 83, 89, 94, 115, 119, 124, 128, 172, 177, 190, 192, 194, 200, 203, 213, 216, 224, 227, 242, 248, 250, 268, 278, 281, 293, 303, 308, 338, 346, 351, 358, 367, 374, 383, 395, 415, 421, 424, 430, 446, 449, 464, 470, 500, 503, 507, 519, 534, 539, 566, 585, 612, 627, 631, 638, 650, 656, 664, 670, 675, 733, 735, 738, 745, 754, 767, 770, 776, 781, 792, 794]
+  },
+  "seqStart": 900,
+  "seqEnd": 1712,
+  "barcode": "barcode_7r"
+}]

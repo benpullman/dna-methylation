@@ -1,3 +1,4 @@
+/*
 package org.bp.alignment
 
 import org.bp.models._
@@ -69,3 +70,4 @@ object NeedlemanWunsch {
 		//scoringMatrix
 	}
 }
+*/

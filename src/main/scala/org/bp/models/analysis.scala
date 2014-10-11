@@ -1,7 +1,7 @@
 package org.bp.models
 
 case class Alignment(mismatches: Int, gaps: Int, direction: String, length: Int)
-case class Methylation(cpGSites: Int, methylatedCpGSites: Int, sequence: List[String],reference: List[Int])
+case class Methylation(cpGSites: Int, methylatedCpGSites: Int, sequence: Vector[String],reference: Vector[Int])
 case class BisulfiteConversion(convertedCpH: Int, unconvertedCpH: Int, direction: String)
 case class Analysis(
 	sequenceName: String,
@@ -12,7 +12,8 @@ case class Analysis(
 	bisulfite: BisulfiteConversion,
 	methylation: Methylation,
 	seqStart: Int,
-	seqEnd: Int
+	seqEnd: Int,
+	barcode: String
 	){
 	def toString2(): String = {
 		"Sequence name:\t\t\t" + sequenceName + "\n" +
@@ -43,11 +44,11 @@ case class Analysis(
 		"Number of methylated CpGs\t\t\t" + 					methylation.methylatedCpGSites + "\n" + 
 		"Percent methylated\t\t\t\t" + 							(methylation.methylatedCpGSites.toFloat/(methylation.cpGSites + methylation.methylatedCpGSites))*100 + "%\n" + 
 		"Number of unconverted CpHs (CpA/CpT/CpC)\t" + 			bisulfite.unconvertedCpH + "\n" +
-		"Number of CpHs\t\t\t\t\t" + 							bisulfite.convertedCpH + "\n" +
+		"Number of CpHs\t\t\t\t\t" + 							(bisulfite.unconvertedCpH + bisulfite.convertedCpH) + "\n" +
 		"Percent converted CpHs (CpA/CpT/CpC)\t\t" + 			(bisulfite.convertedCpH.toFloat/(bisulfite.convertedCpH + bisulfite.unconvertedCpH))*100+ "%\n" +
 		"Number of mismatches (include gaps)\t\t" + 			alignment.mismatches + "\n" +
 		"Number of gaps:\t\t\t\t\t" + 							alignment.gaps + "\n" +
-		"Alignment length:\t\t\t\t" + 							sequenceLength + "\n" +
+		"Alignment length:\t\t\t\t" + 							alignment.length + "\n" +
 		"Percent identity:\t\t\t\t" + 							((sequenceLength-alignment.mismatches.toFloat)/sequenceLength)*100 + "%\n" + 
 		"Methylation pattern:\t\t\t\t" + 						methylation.sequence.foldLeft("")(_+_) + "\n" +
 		"(U: unmethylated, M: methylated, A,C,G,T,N: mismatch, -: gap)"

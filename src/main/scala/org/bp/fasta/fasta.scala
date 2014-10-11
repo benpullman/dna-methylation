@@ -7,19 +7,20 @@ object FASTA {
 	def read(filename: String) = {
 		//reading by char
 		// two char sequences - 
-		val output = Source.fromFile(filename).foldLeft[(Boolean,String,List[Nucleobase],List[DNA])]((true, "", List(), List()))((out, add) => {
+		val output = Source.fromFile(filename).foldLeft[(Boolean,String,Vector[Nucleobase],List[DNA])]((true, "", Vector(), List()))((out, add) => {
 			add match {
 				case '>' => {
-					(true, "", List(),  DNA(out._2, out._3.reverse) :: out._4)
+					(true, "", Vector(),  DNA(out._2, out._3.reverse) :: out._4)
 				}
 				case '\n' => if (out._1) (false, out._2, out._3, out._4) else out
 				case '\r' => if (out._1) (false, out._2, out._3, out._4) else out
-				case other => if (out._1) (out._1, out._2 + add, out._3, out._4) else (out._1, out._2, Nucleobase.charToNucleobase(add) :: out._3, out._4)
+				case other => if (out._1) (out._1, out._2 + add, out._3, out._4) else (out._1, out._2, Nucleobase.charToNucleobase(add) +: out._3, out._4)
 				}
 			}
 		)
 		(DNA(output._2,output._3.reverse) :: output._4).reverse.drop(1)
 	}
+	/*
 	def readStream(filename: String) = {
 		//reading by char
 		// two char sequences - 
@@ -38,13 +39,13 @@ object FASTA {
 		val outstream = (DNA(output._2,output._3.reverse) #:: output._4).reverse.drop(1)
 		outstream(10000) + "\n" + outstream(10001)
 	}
-	def readNoSave(filename: String) = {
+	def readNoSave(filename: String,process:DNA => Unit) = {
 		//reading by char
 		// two char sequences - 
 		Source.fromFile(filename).toStream.foldLeft[(Boolean,String,List[Nucleobase],Int)]((true, "", List(),0))((out, add) => {
 			add match {
 				case '>' => {
-					println(out._4 + 1)
+					process(DNA(out._2,out._3.reverse))
 					//println(DNA(out._2, out._3))
 					(true, "", List(), out._4 + 1)
 				}
@@ -57,4 +58,5 @@ object FASTA {
 		"Done"
 		//DNA(output._2,output._3) :: output._4.drop(1)
 	}
+	*/
 }
