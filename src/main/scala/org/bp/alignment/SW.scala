@@ -1,3 +1,4 @@
+/*
 package org.bp.alignment
 
 import org.bp.models._
@@ -136,3 +137,4 @@ object SW {
 		(DNA("bisulfite",both._1.reverse.toVector),DNA("genome",both._2.reverse.toVector))
 	}
 }
+*/

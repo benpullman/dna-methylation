@@ -2,6 +2,7 @@ package org.bp.models
 
 import org.bp.alignment._
 import org.bp.methylation._
+import scala.io.Source
 
 case class Nucleobase(name: String){
   override def toString = this.name match {
@@ -144,7 +145,7 @@ case class DNA(name: String, nucleobases: Vector[Nucleobase], bisulfiteConversio
     )
     (DNA(output._2,output._3.reverse) :: output._4).reverse.drop(1)
   }
-    def CpGSiteMap(sequences: List[DNA]): Map[(String,String),List[Int]] = {
+    def CpGSiteMap(sequences: List[DNA]): Map[(String,String),Vector[Int]] = {
       sequences.map(sequence => ((sequence.bisulfiteConversion.get,sequence.direction.get),sequence.findCpgSites)).toMap
     }
   }
@@ -342,12 +343,14 @@ object Sequence{
     }
     generate(reference.bisulfiteConversion.getOrElse(""),reference.direction.getOrElse(""))(seq,ref)
   }
+  /*
   def errorsFromComparison(comparison:List[String],sequence:DNA) = {
     val direction = sequence.direction.getOrElse("")
     val errors = comparison.foldLeft(0)((acc,next) => if (next=="X") acc + 1 else acc)
     val gaps = sequence.nucleobases.foldLeft(0)((acc,next) => if (next==Nucleobase("-")) acc + 1 else acc)
     Alignment(mismatches = errors, gaps = gaps, direction = direction, length = sequence.nucleobases.length)
   }
+  */
   def methylation(list: List[String]): List[String] = {
     val methylationList = list.filter(comp => comp == "*" || comp == "#").map(comp => if (comp == "*") "M" else "U")
     methylationList
@@ -410,28 +413,49 @@ object Sequence{
     Analysis(sequenceName = name, sequenceLength = sequenceLength, referenceLength = referenceLength, referenceName = r.name, alignment = alignmentErrors, bisulfite = bisulfite, methylation = methylation, seqStart=sw._2._1, seqEnd=sw._2._2,barcode=barcode)
   }
   */
-  def bestAlignment(s: DNA, rlist: List[DNA], hit: Int, miss: Int, gapUp: Int, gapLeft: Int, barcode: String) = {
-    val best = rlist.par.map(ref => SmithWaterman.process(s,ref,hit,miss,gapUp,gapLeft)).maxBy(_.alignmentParameters.score)
+  def bestAlignment(s: DNA, rlist: List[DNA], hit: Int, miss: Int, gapUp: Int, gapLeft: Int) = {
+    val best = rlist.par.map(r => SmithWaterman.process(s,r,hit,miss,gapUp,gapLeft)).maxBy(_.params.score)
     best
   }
+  def methylationProcess(s: DNA, r: DNA, bisulfiteMap: Map[String,Int]) = {
+    val methylationList = r.findCpgSites
+    val methylationPoints = MethylationProcess.checkSites(methylationList,s)
+    Methylation(bisulfiteMap.getOrElse("#",0),bisulfiteMap.getOrElse("*",0),methylationPoints, methylationList.map(_+1))
+  }
+  def bisulfiteProcess(s: DNA, r: DNA, bisulfiteMap: Map[String,Int]) = {
+    BisulfiteConversion(bisulfiteMap.getOrElse(":",0),bisulfiteMap.getOrElse("!",0),r.bisulfiteConversion.getOrElse(""))
+  }
   def toAnalysis(s: DNA, rlist: List[DNA], hit: Int, miss: Int, gapUp: Int, gapLeft: Int, barcode: String): Analysis = {
+
+    def matchBase(i: Nucleobase, j: Nucleobase): Boolean = {
+      j match {
+        case Nucleobase("cT") => (Nucleobase("T") == i || Nucleobase("C") == i)
+        case Nucleobase("cA") => (Nucleobase("A") == i || Nucleobase("G") == i)
+        case nucleobase => (nucleobase == i)
+      }
+    }
+
+
     val start: Double = System.currentTimeMillis / 1000.0
-    val best = bestAlignment(s,ref,hit,miss,gapUp,gapLeft)
+    val best = bestAlignment(s,rlist,hit,miss,gapUp,gapLeft)
     val endSequences: Double = System.currentTimeMillis / 1000.0
-    val methylationList = best.reference.findCpgSites
-    val methylationPoints = MethylationProcess.checkSites(methylation,sequence)
-    val comparison = generateComparison(sequence,reference)
-    val alignmentErrors = errorsFromComparison(comparison,sequence)
-    //compare(reference,sequence,comparison,60)
-    val sequenceLength = s.nucleobases.length
-    val referenceLength = r.nucleobases.length
-    val name = s.name
-    val bisulfiteMap = comparison.groupBy(t => t).map(t => (t._1,t._2.length))
-    val methylation = Methylation(bisulfiteMap.getOrElse("#",0),bisulfiteMap.getOrElse("*",0),methylationPoints, methylationList.map(_+1))
-    val bisulfite = BisulfiteConversion(bisulfiteMap.getOrElse(":",0),bisulfiteMap.getOrElse("!",0),r.bisulfiteConversion.getOrElse(""))
+    val bisulfiteMap = generateComparison(best.sample, best.reference).groupBy(t => t).map(t => (t._1,t._2.length))
+    val methylation = methylationProcess(best.sample, best.reference, bisulfiteMap)
+    val bisulfite = bisulfiteProcess(best.sample, best.reference, bisulfiteMap)
     val finish: Double = System.currentTimeMillis / 1000.0
     println("Sequence process time: " + (endSequences.toDouble-start.toDouble) + " Other process time: " + (finish.toDouble - endSequences.toDouble))
-    Analysis(sequenceName = name, sequenceLength = sequenceLength, referenceLength = referenceLength, referenceName = r.name, alignment = alignmentErrors, bisulfite = bisulfite, methylation = methylation, seqStart=sw._2._1, seqEnd=sw._2._2,barcode=barcode)
+    Analysis(
+      sequenceName = best.sample.name,
+      sequenceLength = best.sample.nucleobases.length,
+      referenceLength = best.reference.nucleobases.length,
+      referenceName = best.reference.name,
+      alignment = AlignmentAnalysis(best.params.mismatches, best.params.gaps, best.sample.direction.getOrElse("None"), best.length),
+      bisulfite = bisulfite,
+      methylation = methylation,
+      seqStart= best.params.start,
+      seqEnd= best.params.end,
+      barcode=barcode
+    )
   }
   def process(newSequence: DNA, references: List[DNA], sampleMap: Map[String,String]) = {
     println(newSequence.name)

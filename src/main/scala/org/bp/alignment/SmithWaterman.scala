@@ -2,91 +2,46 @@ package org.bp.alignment
 
 import org.bp.models._
 
-case class Alignment(sample: DNA, reference: DNA, params: AlignmentParameters){
-	def length: this.params.length
-	def percentAligned: this.params.percentAligned
+case class Alignment[T](seq1: Seq[T], seq2: Seq[T], params: AlignmentParameters){
+	def length: Int = this.params.length
+	def percentAligned: Double = this.params.percentAligned
 }
 
 case class AlignmentParameters(score: Int, start: Int, end: Int, gaps: Int, mismatches: Int){
-	def length: this.start-this.end
-	def percentAligned: this.mismatches.toDouble/this.length.toDouble
+	def length: Int = this.start - this.end
+	def percentAligned: Double = this.mismatches.toDouble/this.length.toDouble
 }
 
-object SmithWaterman{
+case class ScoredPoint(score: Int, point: Point)
 
-	def process(sample: DNA, reference: DNA, hit: Int, miss: Int, gapUp: Int, gapLeft: Int) = {
+case class Point(x: Int, y: Int)
 
-		//begin timing
-		val startClock: Double = System.currentTimeMillis / 1000.0
-		val finishClock: Double = System.currentTimeMillis / 1000.0
-		println("Alignment time + " + (finishClock.toDouble - startClock.toDouble))
+class SmithWaterman[T](gapVal: T, hit: Int, miss: Int, gapUp: Int, gapLeft: Int, comparison: (T,T) => Boolean){
 
-		//intialize variables
-		val s = sample.nucleobases
-		val r = references.nucleobases
-		val direction = references.direction
-		val bisulfiteConversion = references.bisulfiteConversion
-		case class ScoredPoint(score: Int, point: Point)
-		case class Point(x: Int, y: Int)
-		var largest = ScoredPoint(0,(0,0))
-		var directionMatrix = Array.ofDim[String](s.length + 1 ,r.length + 1)
-		var scoringMatrix = Array.ofDim[Int](s.length + 1 ,r.length + 1)
+	def run(seq1: Seq[T], seq2: Seq[T]): Alignment {
+		val directionScore = calculate(seq1, seq2)
+		val aligned = readDirectionMatrix(seq1, seq2, directionScore._1, directionScore._2)
+		val params = AlignmentParameters(directionScore._2.score,aligned._2._1,aligned._2._2,aligned._3._1,aligned._3._2)
+		Alignment(aligned._1._1,aligned._1._2,params)
+	}
 
-		//Operations
-		setScoringMatrix
-		val aligned = readDirectionMatrix
-		val params = AlignmentParameters(largest.score,aligned._2._1,aligned._2._2,aligned._3._1,aligned._3._2)
-		val alignedSample = DNA("sample",aligned._1._1,direction,bisulfiteConversion)
-		val alignedReference = DNA("reference",aligned._1._2,direction,bisulfiteConversion)
-		Alignment(alignedSample,alignedReference,params)
+	def calculate(seq1: Seq[T], seq2: Seq[T]): (Array[Array[String]],ScoredPoint) {
+		var scoringMatrix = createScoringMatrix(seq1.length, seq2.length)
+		var directionMatrix = Array.ofDim[String](seq1.length + 1, seq2.length + 1)
+		var largest = ScoredPoint(0,Point(0,0))
 
-		//return
-		//AlignmentProcess(scoringMatrix, directionMatrix, y, largest._2._1,largest._2._2, largest._1)
-
-		def initializeScoringMatrix: Unit = {
-			for (i <- 1 to a.length; j <- 1 to b.length){
-				scoringMatrix(i)(j) = -1
-			}
+		for (i <- 0 to seq1.length; j <- 0 to seq2.length){
+			scoringMatrix(i)(j) = score(i,j)
 		}
 
-		def match(i: Int, j: Int): Boolean = {
-			r(j-1) match {
-				case Nucleobase("cT") => if (Nucleobase("T") == s(i-1) || Nucleobase("C") == s(i-1))
-				case Nucleobase("cA") => if (Nucleobase("A") == s(i-1) || Nucleobase("G") == s(i-1))
-				case nucleobase => if (nucleobase == s(i-1))
-			}
-		}
-
-		def matchScore(i: Int, j: Int): Int = {
-			if match(i,j) hit else miss
-		}
-
-		def matchError(i: Int, j: Int): Int = {
-			if match(i,j) 0 else 1
-		}
-
-		def setScoringMatrix: Unit = {
-
-			initializeScoringMatrix
-
-			for (i <- 0 to a.length; j <- 0 to b.length){
-				scoringMatrix(i)(j) = score(i,j)
-			}
-
-			def initializeScoringMatrix: Unit = {
-				for (i <- 1 to a.length; j <- 1 to b.length){
-					scoringMatrix(i)(j) = -1
-				}
-			}
-
-			def score(i:Int,j:Int): Int = {
-				scoringMatrix(i)(j) match {
-					case -1 => {
-						val diag = score(i-1,j-1) + matchScore(i,j)
-						val left = score(i,j-1) + gapLeft
-						val up = score(i-1,j) + gapUp
-						val best = List(diag, left, up, 0).max
-						if (best > largest._1) largest = ScoredPoint(best,(i,j))
+		def score(i:Int,j:Int): Int = {
+			scoringMatrix(i)(j) match {
+				case -1 => {
+					val diag = score(i-1,j-1) + matchScore(seq1(i),seq2(j))
+					val left = score(i,j-1) + gapLeft
+					val up = score(i-1,j) + gapUp
+					val best = List(diag, left, up, 0).max
+					if (best > largest.score) largest = ScoredPoint(best,Point(i,j))
 						best match {
 							case d if d == diag => {
 								directionMatrix(i)(j) = "diag"
@@ -107,64 +62,59 @@ object SmithWaterman{
 							case _ => -100000
 						}
 					}
-					case a => a
+				case a => a
+			}
+		}
+		(directionMatrix, largest)
+	}
+
+	def createScoringMatrix(length1: Int, length2: Int): Array[Array[Int]] = {
+		var scoringMatrix = Array.ofDim[Int](length1 + 1 ,length2 + 1)
+		for (i <- 1 to length1; j <- 1 to length2){
+			scoringMatrix(i)(j) = -1
+		}
+		scoringMatrix
+	}
+
+	def readDirectionMatrix(seq1: Seq[T], seq2: Seq[T], directionMatrix: Array[Array[String]], largest: ScoredPoint): ((Vector[T],Vector[T]),(Int,Int),(Int,Int)) = {
+		var start = 0
+		var end = largest.point.x
+		var mismatches = 0
+		var gaps = 0
+		def read(i: Int,j: Int): (Vector[Nucleobase],Vector[Nucleobase]) = {
+			directionMatrix(i)(j) match {
+				case "diag" => {
+					mismatches += matchError(i,j)
+					val prev = read(i-1,j-1)
+					(s(i-1) +: prev._1, r(j-1) +: prev._2)					
+				}
+				case "upup" => {
+					gaps += 1
+					mismatches += 1
+					val prev = read(i-1,j)
+					(s(i-1) +: prev._1, Nucleobase("-") +: prev._2)					
+				}
+				case "left" => {
+					gaps += 1
+					mismatches += 1
+					val prev = read(i,j-1)
+					(Nucleobase("-") +: prev._1, r(j-1) +: prev._2)					
+				}
+				case _ => {
+					start = i+1
+					(Vector(),Vector())
 				}
 			}
 		}
-
-		def readDirectionMatrix: ((Vector,Vector),(Int,Int),(Int,Int)) = {
-			var start = 0
-			var end = largest.point.x
-			var mismatches = 0
-			var gaps = 0
-			def read(i: Int,j: Int): (Vector,Vector) = {
-				directionMatrix(i)(j) match {
-					case "diag" => {
-						mismatches += matchError(i,j)
-						val prev = read(i-1,j-1,directionMatrix)
-						((a(i-1) +: prev._1, b(j-1) +: prev._2)					
-					}
-					case "upup" => {
-						gaps += 1
-						mismatches += 1
-						val prev = read(i-1,j,directionMatrix)
-						((a(i-1) +: prev._1, Nucleobase("-") +: prev._2)					
-					}
-					case "left" => {
-						gaps += 1
-						mismatches += 1
-						val prev = read(i,j-1,directionMatrix)
-						(Nucleobase("-") +: prev._1, b(j-1) +: prev._2)					
-					}
-					case _ => {
-						start = i+1
-						(Vector(),Vector())
-					}
-				}
-			}
-			(read(largest.point.x,largest.point.y),(start,end),(mismatches,gaps))
-		}
-
+		(read(largest.point.x,largest.point.y),(start,end),(mismatches,gaps))
 	}
 
-	
-
-	def getErrors(pairs: List[(Nucleobase,Nucleobase)],reference: DNA) = {
-		val alignment = pairs.foldLeft((0,0))((tally,next) => {
-			val genome = next._2
-			val bisulfite = next._1
-			bisulfite match {
-				case Nucleobase("-") => (tally._1 + 1, tally._2 + 1)
-				case Nucleobase("T") => if (Nucleobase("T") == genome || Nucleobase("C") == genome) tally else (tally._1 + 1, tally._2)
-				case nucleobase => if (genome != nucleobase) (tally._1 + 1, tally._2) else tally
-			}
-		})
-		Alignment(alignment._1,alignment._2,reference.direction.getOrElse(""),pairs.length)
+	def matchScore(i: T, j: T): Int = {
+		if (comparison(i,j)) hit else miss
 	}
 
-	def getSequences(pairs: List[(Nucleobase,Nucleobase)], reference: DNA) = {
-		val both = pairs.unzip
-		//scoringMatrix.foreach{case i => i foreach {j => print(j + " ")}; print('\n')}
-		(DNA("bisulfite",both._1.toVector,reference.bisulfiteConversion,reference.direction),DNA(reference.name,both._2.toVector,reference.bisulfiteConversion,reference.direction))
+	def matchError(i: T, j: T): Int = {
+		if (comparison(i,j)) 0 else 1
 	}
+
 }

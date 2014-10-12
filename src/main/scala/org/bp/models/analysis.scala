@@ -1,6 +1,6 @@
 package org.bp.models
 
-case class Alignment(mismatches: Int, gaps: Int, direction: String, length: Int)
+case class AlignmentAnalysis(mismatches: Int, gaps: Int, direction: String, length: Int)
 case class Methylation(cpGSites: Int, methylatedCpGSites: Int, sequence: Vector[String],reference: Vector[Int])
 case class BisulfiteConversion(convertedCpH: Int, unconvertedCpH: Int, direction: String)
 case class Analysis(
@@ -8,7 +8,7 @@ case class Analysis(
 	sequenceLength: Int,
 	referenceLength: Int,
 	referenceName: String,
-	alignment: Alignment,
+	alignment: AlignmentAnalysis,
 	bisulfite: BisulfiteConversion,
 	methylation: Methylation,
 	seqStart: Int,
