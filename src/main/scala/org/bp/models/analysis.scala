@@ -1,7 +1,7 @@
 package org.bp.models
-
+/*
 case class AlignmentAnalysis(mismatches: Int, gaps: Int, direction: String, length: Int)
-case class Methylation(cpGSites: Int, methylatedCpGSites: Int, sequence: Vector[String],reference: Vector[Int])
+case class Methylation(cpGSites: Int, methylatedCpGSites: Int, sequence: IndexedSeq[String],reference: IndexedSeq[Int])
 case class BisulfiteConversion(convertedCpH: Int, unconvertedCpH: Int, direction: String)
 case class Analysis(
 	sequenceName: String,
@@ -54,3 +54,4 @@ case class Analysis(
 		"(U: unmethylated, M: methylated, A,C,G,T,N: mismatch, -: gap)"
 	}
 }
+*/

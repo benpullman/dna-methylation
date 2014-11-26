@@ -1,4 +1,4 @@
-package org.bp.models
+/*package org.bp.models
 
 import spray.json._
 import DefaultJsonProtocol._
@@ -14,3 +14,4 @@ object JsonProtocol extends DefaultJsonProtocol {
   implicit val regionListFormat = jsonFormat2(RegionList.apply)
   implicit val multiplexedFormat = jsonFormat1(MultiplexedSequence.apply)
 }
+*/

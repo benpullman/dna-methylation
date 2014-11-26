@@ -5,11 +5,12 @@ import org.bp.methylation._
 import scala.io.Source
 
 case class Nucleobase(name: String){
-  override def toString = this.name match {
+  /*override def toString = this.name match {
     case "cT" => "T"
     case "cA" => "A"
     case other => other
-  }
+  }*/
+  override def toString = this.name
   def toRNA = this match {
     case Nucleobase("T") => Nucleobase("U")
     case other => other
@@ -24,9 +25,9 @@ case class Nucleobase(name: String){
   }
 }
 
-class Sequence(name: String, nucleobases: Vector[Nucleobase], bisulfiteConversion: Option[String] = None, direction: Option[String] = None){
+class Sequence(name: String, nucleobases: IndexedSeq[Nucleobase], bisulfiteConversion: Option[String] = None, direction: Option[String] = None){
     override def toString = "Name: " + name + bisulfiteConversion.map(" " + _ + " ").getOrElse("") + direction.map(_ + " ").getOrElse("") + "\nSequence: " + this.nucleobases.foldLeft("")((nucleotide,nucleobase) => nucleotide + nucleobase)
-    def findCpgSites = this.nucleobases.foldLeft[(Boolean,Int,Vector[Int])]((false,0,Vector()))((acc,next) => {
+    def findCpgSites = this.nucleobases.foldLeft[(Boolean,Int,IndexedSeq[Int])]((false,0,IndexedSeq()))((acc,next) => {
       if (acc._1 && next == Nucleobase("G")) {
         (false, acc._2 + 1, (acc._2 - 1) +: acc._3)
       } else if (next == Nucleobase("C")){
@@ -38,14 +39,14 @@ class Sequence(name: String, nucleobases: Vector[Nucleobase], bisulfiteConversio
     def length = this.nucleobases.length
 }
 
-case class DNA(name: String, nucleobases: Vector[Nucleobase], bisulfiteConversion: Option[String] = None, direction: Option[String] = None) extends Sequence(name: String, nucleobases: Vector[Nucleobase],bisulfiteConversion: Option[String], direction: Option[String]){
+case class DNA(name: String, nucleobases: IndexedSeq[Nucleobase], bisulfiteConversion: Option[String] = None, direction: Option[String] = None) extends Sequence(name: String, nucleobases: IndexedSeq[Nucleobase],bisulfiteConversion: Option[String], direction: Option[String]){
   //def toRNA = RNA(name = name, nucleobases = this.nucleobases.map(nucleobase => nucleobase.toRNA))
   def reverseComplement = this.nucleobases.reverse.map(nucleobase => nucleobase.complement)
   def reverse = this.copy(nucleobases = this.nucleobases.reverse)
   def add(nucleobase: Nucleobase) = this.copy(nucleobases = nucleobase+:nucleobases)
   def bisulfite: List[DNA] = {
-    val forward = Map(Vector(Nucleobase("C"),Nucleobase("G")) -> Vector(Nucleobase("G"), Nucleobase("C")))
-    val reverse = Map(Vector(Nucleobase("C"),Nucleobase("G")) -> Vector(Nucleobase("C"), Nucleobase("G")))
+    val forward = Map(IndexedSeq(Nucleobase("C"),Nucleobase("G")) -> IndexedSeq(Nucleobase("G"), Nucleobase("C")))
+    val reverse = Map(IndexedSeq(Nucleobase("C"),Nucleobase("G")) -> IndexedSeq(Nucleobase("C"), Nucleobase("G")))
     val CtoT = Map(Nucleobase("C") -> Nucleobase("cT"))
     val GtoA = Map(Nucleobase("G") -> Nucleobase("cA"))
     def forwardCtoT = Sequence.convert(forward,false,CtoT)_
@@ -59,12 +60,15 @@ case class DNA(name: String, nucleobases: Vector[Nucleobase], bisulfiteConversio
       DNA(this.name,reverseComplementGtoA(this),Some("G => A"),Some("Reverse Complement"))
     )
   }
+  def addMethylation = {
+    (this,this.findCpgSites)
+  }
   
   def generateBisulfiteQuartet = {
       val CtoT = Map(Nucleobase("C") -> Nucleobase("T"))
       val GtoA = Map(Nucleobase("G") -> Nucleobase("A"))
       def bisulfiteConversionForward(input: DNA, conversion: Map[Nucleobase,Nucleobase], conversionString: String) = {
-        val sequence = input.nucleobases.foldLeft[(Vector[Nucleobase],Option[Nucleobase])]((Vector(),None))((bases,next) => {
+        val sequence = input.nucleobases.foldLeft[(IndexedSeq[Nucleobase],Option[Nucleobase])]((IndexedSeq(),None))((bases,next) => {
           next match {
             case Nucleobase("C") => bases._2 match {
               case Some(Nucleobase("C")) => (conversion.getOrElse(Nucleobase("C"), Nucleobase("C")) +: bases._1, Some(Nucleobase("C")))
@@ -83,7 +87,7 @@ case class DNA(name: String, nucleobases: Vector[Nucleobase], bisulfiteConversio
         DNA(input.name,sequence,Some(conversionString),Some("Forward"))
       }
       def bisulfiteConversionReverseComplement(input: DNA, conversion: Map[Nucleobase,Nucleobase], conversionString: String) = {
-        val sequence = input.nucleobases.foldLeft[(Vector[Nucleobase],Option[Nucleobase])]((Vector(),None))((bases,next) => {
+        val sequence = input.nucleobases.foldLeft[(IndexedSeq[Nucleobase],Option[Nucleobase])]((IndexedSeq(),None))((bases,next) => {
           next match {
             case Nucleobase("C") => bases._2 match {
               case Some(Nucleobase("C")) => (conversion.getOrElse(Nucleobase("C"), Nucleobase("C")).complement +: bases._1, Some(Nucleobase("C")))
@@ -108,6 +112,8 @@ case class DNA(name: String, nucleobases: Vector[Nucleobase], bisulfiteConversio
         bisulfiteConversionReverseComplement(this,GtoA,"G => A")
       )
     }
+
+
     
 }
 
@@ -115,10 +121,10 @@ case class DNA(name: String, nucleobases: Vector[Nucleobase], bisulfiteConversio
     def read(input: String) = {
     //reading by char
     // two char sequences - 
-      val output = input.foldLeft[(Boolean,String,Vector[Nucleobase],List[DNA])]((true, "", Vector(), List()))((out, add) => {
+      val output = input.foldLeft[(Boolean,String,IndexedSeq[Nucleobase],List[DNA])]((true, "", IndexedSeq(), List()))((out, add) => {
       add match {
         case '>' => {
-          (true, "", Vector(),  DNA(out._2, out._3.reverse) :: out._4)
+          (true, "", IndexedSeq(),  DNA(out._2, out._3.reverse) :: out._4)
         }
         case '\n' => if (out._1) (false, out._2, out._3, out._4) else out
         case '\r' => if (out._1) (false, out._2, out._3, out._4) else out
@@ -132,10 +138,10 @@ case class DNA(name: String, nucleobases: Vector[Nucleobase], bisulfiteConversio
     def readFromFile(filename: String) = {
     //reading by char
     // two char sequences - 
-    val output = Source.fromFile(filename).foldLeft[(Boolean,String,Vector[Nucleobase],List[DNA])]((true, "", Vector(), List()))((out, add) => {
+    val output = Source.fromFile(filename).foldLeft[(Boolean,String,IndexedSeq[Nucleobase],List[DNA])]((true, "", IndexedSeq(), List()))((out, add) => {
       add match {
         case '>' => {
-          (true, "", Vector(),  DNA(out._2, out._3.reverse) :: out._4)
+          (true, "", IndexedSeq(),  DNA(out._2, out._3.reverse) :: out._4)
         }
         case '\n' => if (out._1) (false, out._2, out._3, out._4) else out
         case '\r' => if (out._1) (false, out._2, out._3, out._4) else out
@@ -145,7 +151,7 @@ case class DNA(name: String, nucleobases: Vector[Nucleobase], bisulfiteConversio
     )
     (DNA(output._2,output._3.reverse) :: output._4).reverse.drop(1)
   }
-    def CpGSiteMap(sequences: List[DNA]): Map[(String,String),Vector[Int]] = {
+    def CpGSiteMap(sequences: List[DNA]): Map[(String,String),IndexedSeq[Int]] = {
       sequences.map(sequence => ((sequence.bisulfiteConversion.get,sequence.direction.get),sequence.findCpgSites)).toMap
     }
   }
@@ -180,7 +186,7 @@ object Sequence{
     before.add(added)
   }
   def fromString(name:String, input:String) = {
-    val sequence = input.foldLeft[Vector[Nucleobase]](Vector())((bases,base) => Nucleobase.charToNucleobase(base) +: bases)
+    val sequence = input.foldLeft[IndexedSeq[Nucleobase]](IndexedSeq())((bases,base) => Nucleobase.charToNucleobase(base) +: bases)
     DNA(name,sequence.reverse)
   }
   def GCCount(added: Nucleobase, before: (Int,Int)): (Int,Int) = {
@@ -191,7 +197,7 @@ object Sequence{
     }
   }
   
-  def convert(direction: Map[Vector[Nucleobase],Vector[Nucleobase]], complement: Boolean, bisulfite: Map[Nucleobase,Nucleobase])(sequence: DNA) = {
+  def convert(direction: Map[IndexedSeq[Nucleobase],IndexedSeq[Nucleobase]], complement: Boolean, bisulfite: Map[Nucleobase,Nucleobase])(sequence: DNA) = {
     def applyComplement(base: Nucleobase): Nucleobase = {
       if(complement){
         base.complement
@@ -199,13 +205,13 @@ object Sequence{
         base
       }
     }
-    sequence.nucleobases.foldLeft[(Option[Nucleobase],Vector[Nucleobase])]((None,Vector()))((acc,next) => {
+    sequence.nucleobases.foldLeft[(Option[Nucleobase],IndexedSeq[Nucleobase])]((None,IndexedSeq()))((acc,next) => {
       acc._1 match {
         case Some(nucleobase) => {
           if (next == Nucleobase("C")){
             (Some(Nucleobase("C")),applyComplement(bisulfite.getOrElse(nucleobase,nucleobase)) +: acc._2)
           }else{
-            val next2 = direction.getOrElse(Vector(nucleobase,next),Vector(bisulfite.getOrElse(next,next),bisulfite.getOrElse(nucleobase,nucleobase)).map(applyComplement(_)))
+            val next2 = direction.getOrElse(IndexedSeq(nucleobase,next),IndexedSeq(bisulfite.getOrElse(next,next),bisulfite.getOrElse(nucleobase,nucleobase)).map(applyComplement(_)))
             (None, next2 ++ acc._2)
           }
         }
@@ -231,7 +237,7 @@ object Sequence{
         (name1  + tabList.take(difference-1).foldLeft("")(_ + _),name2 + "\t")
       }
     }
-    def printBases(bases1: Vector[Nucleobase], bases2: Vector[Nucleobase], comparison: List[String], name1: String, name2: String): Unit = {
+    def printBases(bases1: IndexedSeq[Nucleobase], bases2: IndexedSeq[Nucleobase], comparison: List[String], name1: String, name2: String): Unit = {
       if (bases1.length != 0 && bases2.length != 0) {
         println(name2 + bases2.take(lineLength).foldLeft("")(_ + _))
         println(name1 + comparison.take(lineLength).foldLeft("")(_ + _))
@@ -301,7 +307,7 @@ object Sequence{
         "X"
       }
     }
-    def generate(bisulfiteConversion: String, direction: String)(seq: Vector[Nucleobase], ref: Vector[Nucleobase]): List[String] = {
+    def generate(bisulfiteConversion: String, direction: String)(seq: IndexedSeq[Nucleobase], ref: IndexedSeq[Nucleobase]): List[String] = {
       val case1 = ((bisulfiteConversion == "C => T") && (direction == "Forward")) || ((bisulfiteConversion == "G => A") && (direction == "Reverse Complement"))
       val case2 = ((bisulfiteConversion == "G => A") && (direction == "Forward")) || ((bisulfiteConversion =="C => T") && (direction == "Reverse Complement"))
       val back = if (case1) {
@@ -412,9 +418,9 @@ object Sequence{
     println("Sequence process time: " + (endSequences.toDouble-start.toDouble) + " Other process time: " + (finish.toDouble - endSequences.toDouble))
     Analysis(sequenceName = name, sequenceLength = sequenceLength, referenceLength = referenceLength, referenceName = r.name, alignment = alignmentErrors, bisulfite = bisulfite, methylation = methylation, seqStart=sw._2._1, seqEnd=sw._2._2,barcode=barcode)
   }
-  */
+  
   def bestAlignment(s: DNA, rlist: List[DNA], hit: Int, miss: Int, gapUp: Int, gapLeft: Int) = {
-    val best = rlist.par.map(r => SmithWaterman.process(s,r,hit,miss,gapUp,gapLeft)).maxBy(_.params.score)
+    val best = rlist.map(r => DNAAlignment.run(s,r)).maxBy(_.params.score)
     best
   }
   def methylationProcess(s: DNA, r: DNA, bisulfiteMap: Map[String,Int]) = {
@@ -426,16 +432,6 @@ object Sequence{
     BisulfiteConversion(bisulfiteMap.getOrElse(":",0),bisulfiteMap.getOrElse("!",0),r.bisulfiteConversion.getOrElse(""))
   }
   def toAnalysis(s: DNA, rlist: List[DNA], hit: Int, miss: Int, gapUp: Int, gapLeft: Int, barcode: String): Analysis = {
-
-    def matchBase(i: Nucleobase, j: Nucleobase): Boolean = {
-      j match {
-        case Nucleobase("cT") => (Nucleobase("T") == i || Nucleobase("C") == i)
-        case Nucleobase("cA") => (Nucleobase("A") == i || Nucleobase("G") == i)
-        case nucleobase => (nucleobase == i)
-      }
-    }
-
-
     val start: Double = System.currentTimeMillis / 1000.0
     val best = bestAlignment(s,rlist,hit,miss,gapUp,gapLeft)
     val endSequences: Double = System.currentTimeMillis / 1000.0
@@ -471,6 +467,7 @@ object Sequence{
     }
     //println(tag)
   }
+  */
   def findBestBarcode(input: String, sampleMap: Map[String,String]) = {
     val bestSample = sampleMap.keys.map(barcodeAlignment(input,_,10,-1,-5,-5)).maxBy(_.score)
     def completeAlignment(input: String, alignmentProcess: AlignmentProcess) = {

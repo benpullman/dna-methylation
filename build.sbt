@@ -10,7 +10,6 @@ resolvers += "spray" at "http://repo.spray.io/"
 
 libraryDependencies ++= {
   Seq(
-		"org.spire-math" %% "spire" % "0.7.5",
 		"io.spray" %%  "spray-json" % "1.2.6"
   )
 }

@@ -1,4 +1,4 @@
-package org.bp
+/*package org.bp
 
 import org.bp.models._
 import org.bp.fasta._
@@ -64,3 +64,4 @@ object Processor {
   }
 
 }
+*/

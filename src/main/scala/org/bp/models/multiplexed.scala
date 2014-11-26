@@ -3,23 +3,24 @@ package org.bp.models
 import scala.io.Source
 import spray.json._
 import DefaultJsonProtocol._
+import org.bp._
 
 case class AlignmentProcess(scoringMatrix: Array[Array[Int]],directionMatrix: Array[Array[String]], sample: String, endX:Int,endY:Int, score: Int)
 
-case class MultiplexedSequence(regions: List[RegionList]){
-	def addSample(newSequence: DNA, references: List[DNA], sampleMap: Map[String,String]) = {
-		val tag = newSequence.nucleobases.take(18).foldLeft("")(_ + _)
-		val nucleobases = newSequence.nucleobases.drop(18)
+case class MultiplexedSequence(id: Option[Int], name: String, regions: Map[String,RegionList]){
+	def addSample(analysis: Analysis) = {
+		//val tag = newSequence.nucleobases.take(18).foldLeft("")(_ + _)
+		//val nucleobases = newSequence.nucleobases.drop(18)
 		//val barcode = sampleMap.getOrElse(tag,"none")
-		val barcode = MultiplexedSequence.findBestBarcode(tag,sampleMap)
+		//val barcode = MultiplexedSequence.findBestBarcode(tag,sampleMap)
 		//println(tag + " " + barcode)
-		val analysis = Sequence.toAnalysis(newSequence,references,5,-3,-20,-2,barcode)
-		val updatedRegion = regions.filter(_.name == analysis.referenceName).head.addSample(barcode,analysis)
+		//val analysis = Sequence.toAnalysis(newSequence,references,5,-3,-20,-2,barcode)
+		val updatedRegion = regions.get(analysis.referenceName).map(_.addSample(analysis)).get
 		//println(tag)
-		this.copy(regions = updatedRegion :: this.regions.filter(_.name != analysis.referenceName))
+		this.copy(regions = this.regions + (analysis.referenceName -> updatedRegion))
 	}
 }
-
+/*
 case class RegionList(name: String, samples: List[SampleList]){
 	def addSample(sampleName: String, sample: Analysis): RegionList = {
 		val newSample = samples.filter(_.name == sampleName).head.addSample(sample)
@@ -38,6 +39,7 @@ object MultiplexedSequence {
 		val regions = references.map(reference => RegionList(reference.name,SampleList("error",List()) :: sampleMap.keys.toList.map(barcode => SampleList(barcode,List()))))
 		MultiplexedSequence(regions)
 	}
+	
 	def jsonImport(filename: String, references: List[DNA], sampleMap: Map[String,String]): MultiplexedSequence = {
 		import JsonProtocol._
 		val rawJson = Source.fromFile(filename).mkString
@@ -49,12 +51,43 @@ object MultiplexedSequence {
 			multiplexed.copy(regions = updatedRegion :: multiplexed.regions.filter(_.name != analysis.referenceName))
 		})
 	}
+	*/
+
+case class RegionList(samples: Map[String,SampleList]){
+	def addSample(sample: Analysis): RegionList = {
+		val newSamples = samples.get(sample.barcode).map(_.addSample(sample)).get
+		this.copy(samples =  this.samples + (sample.barcode -> newSamples))
+	}
+}
+
+case class SampleSummary(name: String)
+
+case class SampleList(summary: Option[SampleSummary] = None, methylation: Option[Double] = None, analyses: List[Analysis]){
+	def addSample(analysis: Analysis): SampleList = {
+		this.copy(analyses = analysis :: this.analyses)
+	}
+}
+
+object MultiplexedSequence {
+	def create(name: String, references: List[DNA], sampleMap: Map[String,String]) = {
+		//val regions = references.map(reference => RegionList((reference.name -> sampleMap.keys.toList.map(barcode => SampleList((barcode -> List()).toMap)).toMap)))
+		val regions = references.foldLeft[Map[String,RegionList]](Map())((racc,rnew) => {
+			racc + (rnew.name -> RegionList({
+				sampleMap.keys.toList.foldLeft[Map[String,SampleList]](Map())((sacc,snew) => {
+					sacc + (snew -> SampleList(None,None,List()))
+				})
+			}))
+		})
+		MultiplexedSequence(None, name, regions)
+	}
+
 	def importMap(filename: String): Map[String, String] = {
 		Source.fromFile(filename).getLines.foldLeft[Map[String,String]](Map())((values,toAdd) => {
 			val toAddArray = toAdd.split(",")
 			values ++ Map(toAddArray(0) -> toAddArray(1).toUpperCase)
 		})
 	}
+	/*
 	def combine(seq1: MultiplexedSequence, seq2: MultiplexedSequence) = {
 		MultiplexedSequence(seq1.regions ::: seq2.regions)
 	}
@@ -69,6 +102,7 @@ object MultiplexedSequence {
 		//println(bestSample.score)
 		sampleMap.getOrElse(bestSample.sample,"none")
 	}
+	*/
 	def findBestBarcode(input: String, sampleMap: Map[String,String]) = {
 		val bestSample = sampleMap.keys.map(barcodeAlignment(input,_,10,-1,-5,-5)).maxBy(_.score)
 		def completeAlignment(input: String, alignmentProcess: AlignmentProcess) = {
