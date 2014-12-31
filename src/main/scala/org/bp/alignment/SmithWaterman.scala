@@ -12,20 +12,15 @@ case class Alignment[T](seq1: IndexedSeq[T], seq2: IndexedSeq[T], params: Alignm
 	def percentAligned: Double = this.params.percentAligned
 }
 
-case class AlignmentParameters(score: Int, start: Int, end: Int, refStart: Int, gaps: Int, mismatches: Int){
-	def length: Int = this.end - this.start
-	def percentAligned: Double = (1 - this.mismatches.toDouble/this.length.toDouble)
-}
-
 case class ScoredPoint(score: Int, point: Point)
 
 case class Point(x: Int, y: Int)
 
 object DNAAlignment{
 
-	val sw = new SmithWaterman[Nucleobase](Nucleobase("-"),5,-3,-20,-2,matchBase)
+	val sw = new SmithWaterman[Nucleobase](Nucleobase("-"),5,-3,-5,-2,matchBase)
 
-	val swString = new SmithWaterman[String]("-",5,-3,-20,-2,matchBaseString)
+	val swString = new SmithWaterman[String]("-",5,-3,-2,-2,matchBaseString)
 
 	def matchBaseString(i: String, j: String): Boolean = {
       j match {
@@ -45,7 +40,7 @@ object DNAAlignment{
 
     def alignmentShiftString(sampleName: String, referenceName: String, bisulfiteConversion: Option[String], direction: Option[String], alignment: Alignment[String]): DNAAlignment = {
     	val sample = DNA(sampleName, alignment.seq1.map(Nucleobase(_)), bisulfiteConversion, direction)
-    	val reference = DNA(sampleName, alignment.seq2.map(Nucleobase(_)), bisulfiteConversion, direction)
+    	val reference = DNA(referenceName, alignment.seq2.map(Nucleobase(_)), bisulfiteConversion, direction)
     	DNAAlignment(sample, reference, alignment.params)
     }
 

@@ -4,6 +4,31 @@ import scala.io.Source
 import spray.json._
 import DefaultJsonProtocol._
 import org.bp._
+import scala.util.{Try,Success,Failure}
+
+
+case class AlignmentParameters(score: Int, start: Int, end: Int, refStart: Int, gaps: Int, mismatches: Int){
+	def length: Int = this.end - this.start
+	def percentAligned: Double = (1 - this.mismatches.toDouble/this.length.toDouble)
+}
+
+case class Methylation(unmethylated: Int, methylated: Int, sequence: IndexedSeq[String],reference: IndexedSeq[Int]){
+	def methylationPercent = Try(this.methylated / (this.unmethylated + this.methylated))
+}
+
+case class Analysis(barcode: String, referenceLength: Int, sampleName: String, referenceName: String, direction: String, conversion: String, alignment: AlignmentParameters, methylation: Methylation){
+	def length: Int = this.alignment.length
+	def percentAligned: Double = this.alignment.percentAligned
+	def methylationPercent = this.methylation.methylationPercent
+	override def toString(): String = {
+		"Analysis for " + sampleName + "--\n" +
+		"\tBarcode: " + barcode + "\n" +
+		"\tReference: " + referenceName + "\n" +
+		"\tPercent Methylated: " + methylation.methylated + "/" + (methylation.methylated + methylation.unmethylated) + "\n" +
+		"\tPercent Aligned: " + percentAligned
+	}
+	
+}
 
 case class AlignmentProcess(scoringMatrix: Array[Array[Int]],directionMatrix: Array[Array[String]], sample: String, endX:Int,endY:Int, score: Int)
 
@@ -55,8 +80,7 @@ object MultiplexedSequence {
 
 case class RegionList(samples: Map[String,SampleList]){
 	def addSample(sample: Analysis): RegionList = {
-		val newSamples = samples.get(sample.barcode).map(_.addSample(sample)).get
-		this.copy(samples =  this.samples + (sample.barcode -> newSamples))
+		samples.get(sample.barcode).map(_.addSample(sample)).map(newSample => this.copy(samples =  this.samples + (sample.barcode -> newSample))).getOrElse(this)
 	}
 }
 

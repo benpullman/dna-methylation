@@ -5,11 +5,11 @@ import org.bp.methylation._
 import scala.io.Source
 
 case class Nucleobase(name: String){
-  /*override def toString = this.name match {
-    case "cT" => "T"
-    case "cA" => "A"
+  def displayString = this.name match {
+    case "cT" => "C"
+    case "cA" => "G"
     case other => other
-  }*/
+  }
   override def toString = this.name
   def toRNA = this match {
     case Nucleobase("T") => Nucleobase("U")
@@ -65,8 +65,8 @@ case class DNA(name: String, nucleobases: IndexedSeq[Nucleobase], bisulfiteConve
   }
   
   def generateBisulfiteQuartet = {
-      val CtoT = Map(Nucleobase("C") -> Nucleobase("T"))
-      val GtoA = Map(Nucleobase("G") -> Nucleobase("A"))
+      val CtoT = Map(Nucleobase("C") -> Nucleobase("cT"))
+      val GtoA = Map(Nucleobase("G") -> Nucleobase("cA"))
       def bisulfiteConversionForward(input: DNA, conversion: Map[Nucleobase,Nucleobase], conversionString: String) = {
         val sequence = input.nucleobases.foldLeft[(IndexedSeq[Nucleobase],Option[Nucleobase])]((IndexedSeq(),None))((bases,next) => {
           next match {
@@ -225,7 +225,8 @@ object Sequence{
     })._2
   }
   
-  def compare(seq1: DNA, seq2: DNA, comparison: List[String], lineLength: Int): Unit = {
+  def compare(seq1: DNA, seq2: DNA, lineLength: Int): Unit = {
+    val comparison = generateComparison(seq1,seq2)
     def getNameLength(name1: String, name2: String): (String,String) = {
       val tabList = List("\t","\t","\t","\t")
       val tab1 = name1.length%5
@@ -239,7 +240,7 @@ object Sequence{
     }
     def printBases(bases1: IndexedSeq[Nucleobase], bases2: IndexedSeq[Nucleobase], comparison: List[String], name1: String, name2: String): Unit = {
       if (bases1.length != 0 && bases2.length != 0) {
-        println(name2 + bases2.take(lineLength).foldLeft("")(_ + _))
+        println(name2 + bases2.map(_.displayString).take(lineLength).foldLeft("")(_ + _))
         println(name1 + comparison.take(lineLength).foldLeft("")(_ + _))
         println(name1 + bases1.take(lineLength).foldLeft("")(_ + _))
         println("")
@@ -504,7 +505,7 @@ object Sequence{
     val error = getErrors(completeAlignment(input,bestSample))
     //println(error)
     if (error < 4) {
-      sampleMap.getOrElse(bestSample.sample,"error")
+      bestSample.sample
     } else {
       "error"
     }
