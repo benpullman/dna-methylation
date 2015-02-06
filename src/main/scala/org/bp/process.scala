@@ -8,6 +8,10 @@ import scala.util.{Try,Success,Failure}
 import spray.json._
 import JsonProtocol._
 import java.io._
+import org.apache.spark.rdd.RDD
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkContext._
+import org.apache.spark.SparkConf
 
 /*
 case class DNAAlignment(sample: DNA, reference: DNA, params: AlignmentParameters){
@@ -21,11 +25,14 @@ case class AlignmentParameters(score: Int, start: Int, end: Int, refStart: Int, 
 
 //read in map and reference files
 */
-class Process(name: String, references: List[DNA], map: Map[String,String], barcodeLength: Int){
 
-	val multiplex = MultiplexedSequence.create(name, references, map)
+case class Process(name: String, references: List[DNA], map: Map[String,String], barcodeLength: Int) extends Serializable{
 
-	val ref = references.flatMap(_.generateBisulfiteQuartet).map(_.addMethylation)
+//class Process(name: String, references: List[DNA], map: Map[String,String], barcodeLength: Int) extends Serializable{
+	def multiplex = MultiplexedSequence.create(name, references, map)
+
+	def ref = references.flatMap(_.generateBisulfiteQuartet).map(_.addMethylation)
+
 	//alignment and methylation
 
 	def pre(input: DNA): Option[(DNA,String)] = {
@@ -76,27 +83,42 @@ class Process(name: String, references: List[DNA], map: Map[String,String], barc
 		multiplexedSeq.addSample(analysis)
 	}
 
-	def run(samples: List[DNA]) = samples.map(pre(_)).flatMap(_.par.map{ case (sample,barcode) => align(sample,barcode)}).seq.filter(_.percentAligned > .9).foldLeft(multiplex)(combine(_,_))
+	//def run(samples: RDD[DNA]) = samples.map(pre(_)).flatMap(_.map{ case (sample,barcode) => align(sample,barcode)}).filter(_.percentAligned > .9)//.fold(multiplex)(combine(_,_))
 
 }
 
 object Run{
 
+	//def run(samples: RDD[DNA], process: Process) = samples.map(process.pre(_)).flatMap(_.map{ case (sample,barcode) => process.align(sample,barcode)}).filter(_.percentAligned > .9)//.fold(multiplex)(combine(_,_))
+
 	def main(args: Array[String]): Unit = {
 
-		val out = new PrintWriter(new File("results.txt" ))
+  		val conf = new SparkConf().setMaster("local[20]").setAppName("HITMAP")
+    	val sc = new SparkContext(conf)
+
+		val out = new PrintWriter(new File("results.txt"))
+
+		val sampleFile = "data/mssm-samples/new_mini.txt"
+
+		//val sampleData = sc.textFile(sampleFile, 2).cache()
+
 
 	    val references = FASTA.read("data/mssm-samples/new_refer.txt")
-	    val samples = FASTA.read("data/mssm-samples/new_7200.txt")
+	    val samples = FASTA.read("data/mssm-samples/new_mini.txt")
 	    val map = MultiplexedSequence.importMap("data/mssm-samples/barcode_new.csv")
 
 	    //val references = FASTA.read("data/quma-samples/sample_genome_fasta.txt")
 	    //val samples = FASTA.read("data/quma-samples/Gm9_J1_seq_fasta.txt")
 	    //val map = MultiplexedSequence.importMap("data/quma-samples/easy_example_barcode.csv")
+	    //.map(sample => out.write(sample.toString))
+	    // out.close()
+	    //sampleData.map(samples => println(
 
-
-	    val process = new Process("sample",references,map,4)
-	    println(process.run(samples).toJson)
+	    //val process = new Process("sample",references,map,4)
+	    val process = Process("sample",references,map,4)
+	    //process.run(sc.parallelize(samples)).foreach(println)
+	    sc.parallelize(samples,20).map(sample => process.pre(sample)).flatMap(_.map{ case (sample,barcode) => process.align(sample,barcode)}).foreach(println)
+	    //sampleData.map(samples => println(process.run(FASTA.read(samples)).toJson))
 
 	}
 

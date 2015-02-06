@@ -10,6 +10,7 @@ resolvers += "spray" at "http://repo.spray.io/"
 
 libraryDependencies ++= {
   Seq(
-		"io.spray" %%  "spray-json" % "1.2.6"
+		"io.spray" %%  "spray-json" % "1.2.6",
+		"org.apache.spark" %% "spark-core" % "1.2.0"
   )
 }

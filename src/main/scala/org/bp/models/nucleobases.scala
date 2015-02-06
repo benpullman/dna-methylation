@@ -4,7 +4,7 @@ import org.bp.alignment._
 import org.bp.methylation._
 import scala.io.Source
 
-case class Nucleobase(name: String){
+case class Nucleobase(name: String) extends Serializable{
   def displayString = this.name match {
     case "cT" => "C"
     case "cA" => "G"
@@ -25,7 +25,7 @@ case class Nucleobase(name: String){
   }
 }
 
-class Sequence(name: String, nucleobases: IndexedSeq[Nucleobase], bisulfiteConversion: Option[String] = None, direction: Option[String] = None){
+class Sequence(name: String, nucleobases: IndexedSeq[Nucleobase], bisulfiteConversion: Option[String] = None, direction: Option[String] = None) extends Serializable{
     override def toString = "Name: " + name + bisulfiteConversion.map(" " + _ + " ").getOrElse("") + direction.map(_ + " ").getOrElse("") + "\nSequence: " + this.nucleobases.foldLeft("")((nucleotide,nucleobase) => nucleotide + nucleobase)
     def findCpgSites = this.nucleobases.foldLeft[(Boolean,Int,IndexedSeq[Int])]((false,0,IndexedSeq()))((acc,next) => {
       if (acc._1 && next == Nucleobase("G")) {

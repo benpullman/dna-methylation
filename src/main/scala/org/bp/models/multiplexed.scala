@@ -7,16 +7,16 @@ import org.bp._
 import scala.util.{Try,Success,Failure}
 
 
-case class AlignmentParameters(score: Int, start: Int, end: Int, refStart: Int, gaps: Int, mismatches: Int){
+case class AlignmentParameters(score: Int, start: Int, end: Int, refStart: Int, gaps: Int, mismatches: Int) extends Serializable{
 	def length: Int = this.end - this.start
 	def percentAligned: Double = (1 - this.mismatches.toDouble/this.length.toDouble)
 }
 
-case class Methylation(unmethylated: Int, methylated: Int, sequence: IndexedSeq[String],reference: IndexedSeq[Int]){
+case class Methylation(unmethylated: Int, methylated: Int, sequence: IndexedSeq[String],reference: IndexedSeq[Int]) extends Serializable{
 	def methylationPercent = Try(this.methylated / (this.unmethylated + this.methylated))
 }
 
-case class Analysis(barcode: String, referenceLength: Int, sampleName: String, referenceName: String, direction: String, conversion: String, alignment: AlignmentParameters, methylation: Methylation){
+case class Analysis(barcode: String, referenceLength: Int, sampleName: String, referenceName: String, direction: String, conversion: String, alignment: AlignmentParameters, methylation: Methylation) extends Serializable{
 	def length: Int = this.alignment.length
 	def percentAligned: Double = this.alignment.percentAligned
 	def methylationPercent = this.methylation.methylationPercent
@@ -30,9 +30,9 @@ case class Analysis(barcode: String, referenceLength: Int, sampleName: String, r
 	
 }
 
-case class AlignmentProcess(scoringMatrix: Array[Array[Int]],directionMatrix: Array[Array[String]], sample: String, endX:Int,endY:Int, score: Int)
+case class AlignmentProcess(scoringMatrix: Array[Array[Int]],directionMatrix: Array[Array[String]], sample: String, endX:Int,endY:Int, score: Int) extends Serializable
 
-case class MultiplexedSequence(id: Option[Int], name: String, regions: Map[String,RegionList]){
+case class MultiplexedSequence(id: Option[Int], name: String, regions: Map[String,RegionList]) extends Serializable{
 	def addSample(analysis: Analysis) = {
 		//val tag = newSequence.nucleobases.take(18).foldLeft("")(_ + _)
 		//val nucleobases = newSequence.nucleobases.drop(18)
@@ -78,15 +78,15 @@ object MultiplexedSequence {
 	}
 	*/
 
-case class RegionList(samples: Map[String,SampleList]){
+case class RegionList(samples: Map[String,SampleList]) extends Serializable {
 	def addSample(sample: Analysis): RegionList = {
 		samples.get(sample.barcode).map(_.addSample(sample)).map(newSample => this.copy(samples =  this.samples + (sample.barcode -> newSample))).getOrElse(this)
 	}
 }
 
-case class SampleSummary(name: String)
+case class SampleSummary(name: String) extends Serializable
 
-case class SampleList(summary: Option[SampleSummary] = None, methylation: Option[Double] = None, analyses: List[Analysis]){
+case class SampleList(summary: Option[SampleSummary] = None, methylation: Option[Double] = None, analyses: List[Analysis])extends Serializable{
 	def addSample(analysis: Analysis): SampleList = {
 		this.copy(analyses = analysis :: this.analyses)
 	}
